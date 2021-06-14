@@ -4,7 +4,7 @@ import styled from 'styled-components'
      * MH = Main Header
      * AS = Aside
      * CT = Content  
-     */
+*/
 
 export const Grid = styled.div`
     display: grid;
