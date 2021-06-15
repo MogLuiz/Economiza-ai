@@ -12,7 +12,9 @@ const App: React.FC = () => {
         
            <ThemeProvider theme={dark} >
                 <GlobalStyles />
-                <Layout />
+                <Layout>
+                   <Dashboard /> 
+                </Layout>
            </ThemeProvider>
         
     )

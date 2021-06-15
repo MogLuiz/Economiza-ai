@@ -1,9 +1,14 @@
-import { off } from 'process';
 import React from 'react';
+
+import { Container } from './style'
+
+import ContentHeader from '../../components/ContentHeader'
 
 const Dashboard: React.FC = () => {
     return (
-        <h1>Dashboard</h1>
+        <Container>
+            <ContentHeader />
+        </Container>
     )
 }
 
