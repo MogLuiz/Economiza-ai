@@ -15,7 +15,7 @@ const ContentHeader: React.FC<IContentHeaderProps> = ({
 }) => {
   return (
     <Container>
-      <TitleContainer>
+      <TitleContainer lineColor={lineColor}>
         <h1>{title}</h1>
       </TitleContainer>
 
