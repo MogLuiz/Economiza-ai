@@ -10,7 +10,11 @@ interface IContentHeaderProps {
   controllers: React.ReactNode;
 }
 
-const ContentHeader: React.FC<IContentHeaderProps> = () => {
+const ContentHeader: React.FC<IContentHeaderProps> = ({
+  title,
+  lineColor,
+  controllers,
+}) => {
   const options = [
     { value: "Luiz", label: "Luiz" },
     { value: "Bruno", label: "Bruno" },
@@ -20,12 +24,10 @@ const ContentHeader: React.FC<IContentHeaderProps> = () => {
   return (
     <Container>
       <TitleContainer>
-        <h1>Título</h1>
+        <h1>{title}</h1>
       </TitleContainer>
 
-      <Controllers>
-        <SelectInput options={options} />
-      </Controllers>
+      <Controllers>{controllers}</Controllers>
     </Container>
   );
 };
