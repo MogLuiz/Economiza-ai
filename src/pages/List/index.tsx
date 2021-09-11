@@ -5,15 +5,23 @@ import SelectInput from "../../components/SelectInput";
 import { Container, Content } from "./style";
 
 const List: React.FC = () => {
-  const options = [
-    { value: "Luiz", label: "Luiz" },
-    { value: "Bruno", label: "Bruno" },
-    { value: "Lucas", label: "Lucas" },
+  const months = [
+    { value: 9, label: "Setembro" },
+    { value: 8, label: "Agosto" },
+    { value: 7, label: "Julho" },
   ];
+
+  const years = [
+    { value: 2021, label: 2021 },
+    { value: 2020, label: 2020 },
+    { value: 2019, label: 2019 },
+  ];
+
   return (
     <Container>
       <ContentHeader title="Saidas" lineColor="#E44C4E">
-        <SelectInput options={options} />
+        <SelectInput options={months} />
+        <SelectInput options={years} />
       </ContentHeader>
 
       <Content>
