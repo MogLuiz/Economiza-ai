@@ -1,18 +1,24 @@
-import React from 'react';
+import React from "react";
 
-import { Container } from './style'
+import { Container } from "./style";
 
-import ContentHeader from '../../components/ContentHeader'
-
+import SelectInput from "../../components/SelectInput";
+import ContentHeader from "../../components/ContentHeader";
 
 const Dashboard: React.FC = () => {
-    return (
-        <Container>
-            <ContentHeader />
-        </Container>
-    )
-}
+  const options = [
+    { value: "Luiz", label: "Luiz" },
+    { value: "Bruno", label: "Bruno" },
+    { value: "Lucas", label: "Lucas" },
+  ];
 
- 
+  return (
+    <Container>
+      <ContentHeader title="Dashboard" lineColor="#fff">
+        <SelectInput options={options} />
+      </ContentHeader>
+    </Container>
+  );
+};
 
-export default Dashboard
+export default Dashboard;
