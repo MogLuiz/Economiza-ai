@@ -4,7 +4,13 @@ import SelectInput from "../SelectInput";
 
 import { Container, TitleContainer, Controllers } from "./styles";
 
-const ContentHeader: React.FC = () => {
+interface IContentHeaderProps {
+  title: string;
+  lineColor: string;
+  controllers: React.ReactNode;
+}
+
+const ContentHeader: React.FC<IContentHeaderProps> = () => {
   const options = [
     { value: "Luiz", label: "Luiz" },
     { value: "Bruno", label: "Bruno" },
