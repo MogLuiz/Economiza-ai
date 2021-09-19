@@ -24,7 +24,8 @@ interface IRouteParams {
 }
 
 interface IData {
-  description: string;
+  id: number;
+  title: string;
   amountFormatted: string;
   frequency: string;
   dataFormatted: string;
@@ -64,7 +65,8 @@ const List: React.FC<IRouteParams> = ({ match }) => {
     async function getData() {
       const response = await listData.map((item) => {
         return {
-          description: item.description,
+          id: Math.random() * data.length,
+          title: item.description,
           amountFormatted: item.amount,
           frequency: item.frequency,
           dataFormatted: item.date,
@@ -77,7 +79,6 @@ const List: React.FC<IRouteParams> = ({ match }) => {
     getData();
   }, []);
 
-  console.log(data);
   // -------------------------------------------------
   // Data
   // -------------------------------------------------
@@ -114,12 +115,15 @@ const List: React.FC<IRouteParams> = ({ match }) => {
       </Filters>
 
       <Content>
-        <HistoryFinanceCard
-          tagColor="#E44C4E"
-          title="Conta de Luz"
-          subtitle="11/09/2021"
-          amount="R$ 130,00"
-        />
+        {data.map((item) => (
+          <HistoryFinanceCard
+            key={item.id}
+            tagColor={item.tagColor}
+            title={item.title}
+            subtitle={item.dataFormatted}
+            amount={item.amountFormatted}
+          />
+        ))}
       </Content>
     </Container>
   );
