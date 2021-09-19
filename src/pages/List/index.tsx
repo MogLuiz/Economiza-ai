@@ -12,6 +12,7 @@ import expenses from "../../repositories/expenses";
 
 // Styles
 import { Container, Content, Filters } from "./style";
+import { useEffect } from "react";
 
 // Types
 interface IRouteParams {
@@ -22,10 +23,19 @@ interface IRouteParams {
   };
 }
 
+interface IData {
+  description: string;
+  amountFormatted: string;
+  frequency: string;
+  dataFormatted: string;
+  tagColor: string;
+}
+
 const List: React.FC<IRouteParams> = ({ match }) => {
   // -------------------------------------------------
   // States
   // -------------------------------------------------
+  const [data, setData] = useState<IData>([]);
 
   // -------------------------------------------------
   // Props
@@ -35,6 +45,7 @@ const List: React.FC<IRouteParams> = ({ match }) => {
   // -------------------------------------------------
   // Hooks
   // -------------------------------------------------
+
   const title = useMemo(() => {
     return type === "entry-balance" ? "Entradas" : "Saídas";
   }, [type]);
