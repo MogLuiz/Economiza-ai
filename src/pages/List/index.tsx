@@ -1,5 +1,8 @@
 // Packages
-import React, { useMemo, useState } from "react";
+import React, { useMemo, useState, useEffect } from "react";
+
+// Utils
+import formatCurrency from "../../utils/formatCurrency";
 
 // Components
 import ContentHeader from "../../components/ContentHeader";
@@ -12,7 +15,6 @@ import expenses from "../../repositories/expenses";
 
 // Styles
 import { Container, Content, Filters } from "./style";
-import { useEffect } from "react";
 
 // Types
 interface IRouteParams {
@@ -67,7 +69,7 @@ const List: React.FC<IRouteParams> = ({ match }) => {
         return {
           id: Math.random() * data.length,
           title: item.description,
-          amountFormatted: item.amount,
+          amountFormatted: formatCurrency(Number(item.amount)),
           frequency: item.frequency,
           dataFormatted: item.date,
           tagColor: item.frequency === "recorrente" ? "#4E41F0" : "#E44C4E",
