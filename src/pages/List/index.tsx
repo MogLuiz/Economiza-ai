@@ -35,7 +35,7 @@ const List: React.FC<IRouteParams> = ({ match }) => {
   // -------------------------------------------------
   // States
   // -------------------------------------------------
-  const [data, setData] = useState<IData>([]);
+  const [data, setData] = useState<IData[]>([]);
 
   // -------------------------------------------------
   // Props
@@ -46,6 +46,8 @@ const List: React.FC<IRouteParams> = ({ match }) => {
   // Hooks
   // -------------------------------------------------
 
+  useEffect(() => {}, []);
+
   const title = useMemo(() => {
     return type === "entry-balance" ? "Entradas" : "Saídas";
   }, [type]);
@@ -54,6 +56,28 @@ const List: React.FC<IRouteParams> = ({ match }) => {
     return type === "entry-balance" ? "#F7931B" : "#E44C4E";
   }, [type]);
 
+  const listData = useMemo(() => {
+    return type === "entry-balance" ? gains : expenses;
+  }, [type]);
+
+  useEffect(() => {
+    async function getData() {
+      const response = await listData.map((item) => {
+        return {
+          description: item.description,
+          amountFormatted: item.amount,
+          frequency: item.frequency,
+          dataFormatted: item.date,
+          tagColor: "#4E41F0",
+        };
+      });
+
+      setData(response);
+    }
+    getData();
+  }, []);
+
+  console.log(data);
   // -------------------------------------------------
   // Data
   // -------------------------------------------------
