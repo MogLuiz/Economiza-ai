@@ -1,5 +1,5 @@
 // Packages
-import React, { useMemo } from "react";
+import React, { useMemo, useState } from "react";
 
 // Components
 import ContentHeader from "../../components/ContentHeader";
@@ -23,8 +23,18 @@ interface IRouteParams {
 }
 
 const List: React.FC<IRouteParams> = ({ match }) => {
+  // -------------------------------------------------
+  // States
+  // -------------------------------------------------
+
+  // -------------------------------------------------
+  // Props
+  // -------------------------------------------------
   const { type } = match.params;
 
+  // -------------------------------------------------
+  // Hooks
+  // -------------------------------------------------
   const title = useMemo(() => {
     return type === "entry-balance" ? "Entradas" : "Saídas";
   }, [type]);
@@ -33,6 +43,9 @@ const List: React.FC<IRouteParams> = ({ match }) => {
     return type === "entry-balance" ? "#F7931B" : "#E44C4E";
   }, [type]);
 
+  // -------------------------------------------------
+  // Data
+  // -------------------------------------------------
   const months = [
     { value: 9, label: "Setembro" },
     { value: 8, label: "Agosto" },
@@ -45,6 +58,9 @@ const List: React.FC<IRouteParams> = ({ match }) => {
     { value: 2019, label: 2019 },
   ];
 
+  // -------------------------------------------------
+  // Render
+  // -------------------------------------------------
   return (
     <Container>
       <ContentHeader title={title} lineColor={lineColor}>
