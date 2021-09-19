@@ -15,7 +15,7 @@ interface IRouteParams {
 const List: React.FC<IRouteParams> = ({ match }) => {
   const { type } = match.params;
   const title = useMemo(() => {
-    return type === "entry-balance" ? "Entradas" : "Saidas";
+    return type === "entry-balance" ? "Entradas" : "Saídas";
   }, [type]);
 
   const months = [
