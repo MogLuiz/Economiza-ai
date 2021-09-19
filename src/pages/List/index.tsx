@@ -1,9 +1,19 @@
+// Packages
 import React, { useMemo } from "react";
+
+// Components
 import ContentHeader from "../../components/ContentHeader";
 import HistoryFinanceCard from "../../components/HistoryFinanceCard";
 import SelectInput from "../../components/SelectInput";
+
+// Data
+import gains from "../../repositories/gains";
+import expenses from "../../repositories/expenses";
+
+// Styles
 import { Container, Content, Filters } from "./style";
 
+// Types
 interface IRouteParams {
   match: {
     params: {
