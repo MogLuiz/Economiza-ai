@@ -37,14 +37,16 @@ interface IData {
 
 const List: React.FC<IRouteParams> = ({ match }) => {
   // -------------------------------------------------
-  // States
-  // -------------------------------------------------
-  const [data, setData] = useState<IData[]>([]);
-
-  // -------------------------------------------------
   // Props
   // -------------------------------------------------
   const { type } = match.params;
+
+  // -------------------------------------------------
+  // States
+  // -------------------------------------------------
+  const [data, setData] = useState<IData[]>([]);
+  const [monthSelected, setMonthSelected] = useState<string>("");
+  const [yearSelected, setYearSelected] = useState<string>("");
 
   // -------------------------------------------------
   // Hooks
