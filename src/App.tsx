@@ -1,12 +1,16 @@
+// Packages
 import React from "react";
-import GlobalStyles from "./styles/GlobalStyles";
-import { ThemeProvider } from "styled-components";
-
-import dark from "./styles/themes/dark";
-
 import Routes from "./routes";
 
+// Style
+import dark from "./styles/themes/dark";
+import { ThemeProvider } from "styled-components";
+import GlobalStyles from "./styles/GlobalStyles";
+
 const App: React.FC = () => {
+  // -------------------------------------------------
+  // Render
+  // -------------------------------------------------
   return (
     <ThemeProvider theme={dark}>
       <GlobalStyles />

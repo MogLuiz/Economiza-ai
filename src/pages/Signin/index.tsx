@@ -1,9 +1,11 @@
-import React from 'react';
+// Packages
+import React from "react";
 
 const Signin: React.FC = () => {
-    return (
-        <h1>Signin</h1>
-    )
-}
+  // -------------------------------------------------
+  // Render
+  // -------------------------------------------------
+  return <h1>Signin</h1>;
+};
 
-export default Signin
+export default Signin;

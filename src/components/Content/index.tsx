@@ -1,14 +1,14 @@
-import React from 'react'
+// Packages
+import React from "react";
 
-import {Container} from './styles'
+// Style
+import { Container } from "./styles";
 
 const Content: React.FC = ({ children }) => {
-    return(
-        <Container>
-            { children }
-        </Container>
-    )
+  // -------------------------------------------------
+  // Render
+  // -------------------------------------------------
+  return <Container>{children}</Container>;
+};
 
-}
-
-export default Content
+export default Content;

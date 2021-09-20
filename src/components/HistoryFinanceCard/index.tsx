@@ -1,7 +1,10 @@
+// Packages
 import React from "react";
 
+// Style
 import { Container, Tag } from "./styles";
 
+// Types
 interface IHistoryFinanceCardProps {
   tagColor: string;
   title: string;
@@ -15,6 +18,9 @@ const HistoryFinanceCard: React.FC<IHistoryFinanceCardProps> = ({
   subtitle,
   amount,
 }) => {
+  // -------------------------------------------------
+  // Render
+  // -------------------------------------------------
   return (
     <Container>
       <Tag color={tagColor} />

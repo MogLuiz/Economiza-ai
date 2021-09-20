@@ -1,7 +1,10 @@
+// Packages
 import React from "react";
 
+// Style
 import { Container, TitleContainer, Controllers } from "./styles";
 
+// Types
 interface IContentHeaderProps {
   title: string;
   lineColor: string;
@@ -13,6 +16,9 @@ const ContentHeader: React.FC<IContentHeaderProps> = ({
   lineColor,
   children,
 }) => {
+  // -------------------------------------------------
+  // Render
+  // -------------------------------------------------
   return (
     <Container>
       <TitleContainer lineColor={lineColor}>

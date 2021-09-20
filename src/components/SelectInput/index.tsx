@@ -1,7 +1,10 @@
+// Packages
 import React from "react";
 
+// Style
 import { Container } from "./styles";
 
+// Types
 interface ISelectInputProps {
   options: {
     value: string | number;
@@ -10,6 +13,9 @@ interface ISelectInputProps {
 }
 
 const SelectInput: React.FC<ISelectInputProps> = ({ options }) => {
+  // -------------------------------------------------
+  // Render
+  // -------------------------------------------------
   return (
     <Container>
       <select>

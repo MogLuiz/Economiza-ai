@@ -1,7 +1,8 @@
+// Packages
 import React from "react";
 
+// Assets
 import logoImg from "../../assets/logo.svg";
-
 import {
   MdDashboard,
   MdArrowDownward,
@@ -9,6 +10,7 @@ import {
   MdExitToApp,
 } from "react-icons/md";
 
+// Style
 import {
   Container,
   Header,
@@ -19,6 +21,9 @@ import {
 } from "./styles";
 
 const Aside: React.FC = () => {
+  // -------------------------------------------------
+  // Render
+  // -------------------------------------------------
   return (
     <Container>
       <Header>
