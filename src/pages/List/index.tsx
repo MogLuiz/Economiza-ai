@@ -4,6 +4,7 @@ import React, { useMemo, useState, useEffect } from "react";
 // Utils
 import formatCurrency from "../../utils/formatCurrency";
 import formatDate from "../../utils/formatDate";
+import listOfMonths from "../../utils/months";
 
 // Components
 import ContentHeader from "../../components/ContentHeader";
@@ -88,11 +89,13 @@ const List: React.FC<IRouteParams> = ({ match }) => {
   }, [listData]);
 
   const months = useMemo(() => {
-    return {
-      value: "year",
-      label: "year",
-    };
-  }, [listData]);
+    return listOfMonths.map((month, index) => {
+      return {
+        value: index + 1,
+        label: month,
+      };
+    });
+  }, []);
 
   useEffect(() => {
     async function getData() {
