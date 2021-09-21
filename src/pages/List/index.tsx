@@ -87,6 +87,13 @@ const List: React.FC<IRouteParams> = ({ match }) => {
     });
   }, [listData]);
 
+  const months = useMemo(() => {
+    return {
+      value: "year",
+      label: "year",
+    };
+  }, [listData]);
+
   useEffect(() => {
     async function getData() {
       const filteredDate = await listData.filter((item) => {
@@ -115,11 +122,11 @@ const List: React.FC<IRouteParams> = ({ match }) => {
   // -------------------------------------------------
   // Data
   // -------------------------------------------------
-  const months = [
-    { value: 9, label: "Setembro" },
-    { value: 8, label: "Agosto" },
-    { value: 7, label: "Julho" },
-  ];
+  // const months = [
+  //   { value: 9, label: "Setembro" },
+  //   { value: 8, label: "Agosto" },
+  //   { value: 7, label: "Julho" },
+  // ];
 
   // -------------------------------------------------
   // Render
