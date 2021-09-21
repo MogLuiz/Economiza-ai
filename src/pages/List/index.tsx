@@ -45,8 +45,12 @@ const List: React.FC<IRouteParams> = ({ match }) => {
   // States
   // -------------------------------------------------
   const [data, setData] = useState<IData[]>([]);
-  const [monthSelected, setMonthSelected] = useState<string>("");
-  const [yearSelected, setYearSelected] = useState<string>("");
+  const [monthSelected, setMonthSelected] = useState<string>(
+    String(new Date().getMonth() + 1)
+  );
+  const [yearSelected, setYearSelected] = useState<string>(
+    String(new Date().getFullYear())
+  );
 
   // -------------------------------------------------
   // Hooks
@@ -108,10 +112,12 @@ const List: React.FC<IRouteParams> = ({ match }) => {
         <SelectInput
           options={months}
           onChange={(e) => setMonthSelected(e.target.value)}
+          defaultValue={monthSelected}
         />
         <SelectInput
           options={years}
           onChange={(e) => setYearSelected(e.target.value)}
+          defaultValue={yearSelected}
         />
       </ContentHeader>
 
