@@ -124,6 +124,12 @@ const List: React.FC<IRouteParams> = ({ match }) => {
   }, [data.length, listData, monthSelected, yearSelected]);
 
   // -------------------------------------------------
+  // Hooks
+  // -------------------------------------------------
+
+  const handleFrequencyClick = (frequency: string) => {};
+
+  // -------------------------------------------------
   // Render
   // -------------------------------------------------
   return (
@@ -142,11 +148,19 @@ const List: React.FC<IRouteParams> = ({ match }) => {
       </ContentHeader>
 
       <Filters>
-        <button type="button" className="tag-filter recurrent">
+        <button
+          type="button"
+          className="tag-filter recurrent"
+          onClick={() => handleFrequencyClick("recorrente")}
+        >
           Recorrentes
         </button>
 
-        <button type="button" className="tag-filter eventual">
+        <button
+          type="button"
+          className="tag-filter eventual"
+          onClick={() => handleFrequencyClick("eventual")}
+        >
           Eventuais
         </button>
       </Filters>
