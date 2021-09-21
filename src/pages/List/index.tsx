@@ -1,5 +1,6 @@
 // Packages
 import React, { useMemo, useState, useEffect } from "react";
+import { uuid } from "uuidv4";
 
 // Utils
 import formatCurrency from "../../utils/formatCurrency";
@@ -109,7 +110,7 @@ const List: React.FC<IRouteParams> = ({ match }) => {
 
       const formattedDate = filteredDate.map((item) => {
         return {
-          id: String(new Date().getTime()) + item.amount,
+          id: uuid(),
           title: item.description,
           amountFormatted: formatCurrency(Number(item.amount)),
           frequency: item.frequency,
@@ -121,15 +122,6 @@ const List: React.FC<IRouteParams> = ({ match }) => {
     }
     getData();
   }, [data.length, listData, monthSelected, yearSelected]);
-
-  // -------------------------------------------------
-  // Data
-  // -------------------------------------------------
-  // const months = [
-  //   { value: 9, label: "Setembro" },
-  //   { value: 8, label: "Agosto" },
-  //   { value: 7, label: "Julho" },
-  // ];
 
   // -------------------------------------------------
   // Render
