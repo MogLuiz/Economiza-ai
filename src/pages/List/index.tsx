@@ -27,7 +27,7 @@ interface IRouteParams {
 }
 
 interface IData {
-  id: number;
+  id: number | string;
   title: string;
   amountFormatted: string;
   frequency: string;
@@ -79,7 +79,7 @@ const List: React.FC<IRouteParams> = ({ match }) => {
 
       const formattedDate = filteredDate.map((item) => {
         return {
-          id: Math.random() * data.length,
+          id: String(new Date().getTime()) + item.amount,
           title: item.description,
           amountFormatted: formatCurrency(Number(item.amount)),
           frequency: item.frequency,
