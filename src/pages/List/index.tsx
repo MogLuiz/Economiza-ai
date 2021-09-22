@@ -53,6 +53,10 @@ const List: React.FC<IRouteParams> = ({ match }) => {
   const [yearSelected, setYearSelected] = useState<string>(
     String(new Date().getFullYear())
   );
+  const [selectedFrequency, setSelectedFrequency] = useState([
+    "recorrente",
+    "eventual",
+  ]);
 
   // -------------------------------------------------
   // Hooks
@@ -124,10 +128,17 @@ const List: React.FC<IRouteParams> = ({ match }) => {
   }, [data.length, listData, monthSelected, yearSelected]);
 
   // -------------------------------------------------
-  // Hooks
+  // Functions
   // -------------------------------------------------
 
-  const handleFrequencyClick = (frequency: string) => {};
+  const handleFrequencyClick = (frequency: string) => {
+    const alreadySelected = selectedFrequency.findIndex(
+      (item) => item === frequency
+    );
+
+    if (alreadySelected >= 0) {
+    }
+  };
 
   // -------------------------------------------------
   // Render
