@@ -11,6 +11,6 @@ export interface IData {
     title: string;
     amountFormatted: string;
     frequency: string;
-    dataFormatted: string;
+    dateFormatted: string;
     tagColor: string;
 }

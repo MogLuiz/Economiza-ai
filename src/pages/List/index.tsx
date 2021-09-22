@@ -24,9 +24,9 @@ import { Container, Content, Filters } from "./style";
 
 const List: React.FC<IRouteParams> = ({ match }) => {
   // -------------------------------------------------
-  // Props
+  // Route Params
   // -------------------------------------------------
-  const { type } = match.params;
+  const movimentType = match.params.type;
 
   // -------------------------------------------------
   // States
@@ -38,7 +38,7 @@ const List: React.FC<IRouteParams> = ({ match }) => {
   const [yearSelected, setYearSelected] = useState<string>(
     String(new Date().getFullYear())
   );
-  const [selectedFrequency, setSelectedFrequency] = useState([
+  const [frequencyFilterSelected, setFrequencyFilterSelected] = useState([
     "recorrente",
     "eventual",
   ]);
@@ -47,16 +47,16 @@ const List: React.FC<IRouteParams> = ({ match }) => {
   // Hooks
   // -------------------------------------------------
   const title = useMemo(() => {
-    return type === "entry-balance" ? "Entradas" : "Saídas";
-  }, [type]);
+    return movimentType === "entry-balance" ? "Entradas" : "Saídas";
+  }, [movimentType]);
 
   const lineColor = useMemo(() => {
-    return type === "entry-balance" ? "#F7931B" : "#E44C4E";
-  }, [type]);
+    return movimentType === "entry-balance" ? "#F7931B" : "#E44C4E";
+  }, [movimentType]);
 
   const listData = useMemo(() => {
-    return type === "entry-balance" ? gains : expenses;
-  }, [type]);
+    return movimentType === "entry-balance" ? gains : expenses;
+  }, [movimentType]);
 
   const years = useMemo(() => {
     let uniqueYears: number[] = [];
@@ -97,7 +97,7 @@ const List: React.FC<IRouteParams> = ({ match }) => {
         return (
           month === monthSelected &&
           year === yearSelected &&
-          selectedFrequency.includes(item.frequency)
+          frequencyFilterSelected.includes(item.frequency)
         );
       });
 
@@ -107,29 +107,37 @@ const List: React.FC<IRouteParams> = ({ match }) => {
           title: item.description,
           amountFormatted: formatCurrency(Number(item.amount)),
           frequency: item.frequency,
-          dataFormatted: formatDate(item.date),
+          dateFormatted: formatDate(item.date),
           tagColor: item.frequency === "recorrente" ? "#4E41F0" : "#E44C4E",
         };
       });
       setData(formattedDate);
     }
     getData();
-  }, [data.length, listData, monthSelected, selectedFrequency, yearSelected]);
+  }, [
+    data.length,
+    listData,
+    monthSelected,
+    frequencyFilterSelected,
+    yearSelected,
+  ]);
 
   // -------------------------------------------------
   // Functions
   // -------------------------------------------------
 
   const handleFrequencyClick = (frequency: string) => {
-    const alreadySelected = selectedFrequency.findIndex(
+    const alreadySelected = frequencyFilterSelected.findIndex(
       (item) => item === frequency
     );
 
     if (alreadySelected >= 0) {
-      const filtered = selectedFrequency.filter((item) => item !== frequency);
-      setSelectedFrequency(filtered);
+      const filtered = frequencyFilterSelected.filter(
+        (item) => item !== frequency
+      );
+      setFrequencyFilterSelected(filtered);
     } else {
-      setSelectedFrequency((prev) => [...prev, frequency]);
+      setFrequencyFilterSelected((prev) => [...prev, frequency]);
     }
   };
 
@@ -155,7 +163,7 @@ const List: React.FC<IRouteParams> = ({ match }) => {
         <button
           type="button"
           className={`tag-filter recurrent
-          ${selectedFrequency.includes("recorrente") && "tag-actived"}`}
+          ${frequencyFilterSelected.includes("recorrente") && "tag-actived"}`}
           onClick={() => handleFrequencyClick("recorrente")}
         >
           Recorrentes
@@ -164,7 +172,7 @@ const List: React.FC<IRouteParams> = ({ match }) => {
         <button
           type="button"
           className={`tag-filter eventual
-          ${selectedFrequency.includes("eventual") && "tag-actived"}`}
+          ${frequencyFilterSelected.includes("eventual") && "tag-actived"}`}
           onClick={() => handleFrequencyClick("eventual")}
         >
           Eventuais
@@ -177,7 +185,7 @@ const List: React.FC<IRouteParams> = ({ match }) => {
             key={item.id}
             tagColor={item.tagColor}
             title={item.title}
-            subtitle={item.dataFormatted}
+            subtitle={item.dateFormatted}
             amount={item.amountFormatted}
           />
         ))}
