@@ -46,22 +46,25 @@ const List: React.FC<IRouteParams> = ({ match }) => {
   // -------------------------------------------------
   // Hooks
   // -------------------------------------------------
-  const title = useMemo(() => {
-    return movimentType === "entry-balance" ? "Entradas" : "Saídas";
-  }, [movimentType]);
 
-  const lineColor = useMemo(() => {
-    return movimentType === "entry-balance" ? "#F7931B" : "#E44C4E";
-  }, [movimentType]);
-
-  const listData = useMemo(() => {
-    return movimentType === "entry-balance" ? gains : expenses;
+  const pageData = useMemo(() => {
+    return movimentType === "entry-balance"
+      ? {
+          title: "Entradas",
+          lineColor: "#F7931B",
+          data: gains,
+        }
+      : {
+          title: "Saídas",
+          lineColor: "#E44C4E",
+          data: expenses,
+        };
   }, [movimentType]);
 
   const years = useMemo(() => {
     let uniqueYears: number[] = [];
 
-    listData.forEach((item) => {
+    pageData.data.forEach((item) => {
       const date = new Date(item.date);
       const year = date.getFullYear();
 
@@ -76,7 +79,7 @@ const List: React.FC<IRouteParams> = ({ match }) => {
         label: year,
       };
     });
-  }, [listData]);
+  }, [pageData.data]);
 
   const months = useMemo(() => {
     return listOfMonths.map((month, index) => {
@@ -89,7 +92,7 @@ const List: React.FC<IRouteParams> = ({ match }) => {
 
   useEffect(() => {
     async function getData() {
-      const filteredDate = await listData.filter((item) => {
+      const filteredDate = await pageData.data.filter((item) => {
         const date = new Date(item.date);
         const month = String(date.getMonth() + 1);
         const year = String(date.getFullYear());
@@ -116,7 +119,7 @@ const List: React.FC<IRouteParams> = ({ match }) => {
     getData();
   }, [
     data.length,
-    listData,
+    pageData.data,
     monthSelected,
     frequencyFilterSelected,
     yearSelected,
@@ -146,7 +149,7 @@ const List: React.FC<IRouteParams> = ({ match }) => {
   // -------------------------------------------------
   return (
     <Container>
-      <ContentHeader title={title} lineColor={lineColor}>
+      <ContentHeader title={pageData.title} lineColor={pageData.lineColor}>
         <SelectInput
           options={months}
           onChange={(e) => setMonthSelected(e.target.value)}
