@@ -5,12 +5,7 @@ import React from "react";
 import { Container, Tag } from "./styles";
 
 // Types
-interface IHistoryFinanceCardProps {
-  tagColor: string;
-  title: string;
-  subtitle: string;
-  amount: string;
-}
+import { IHistoryFinanceCardProps } from "./types";
 
 const HistoryFinanceCard: React.FC<IHistoryFinanceCardProps> = ({
   tagColor,
