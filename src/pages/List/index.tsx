@@ -139,6 +139,8 @@ const List: React.FC<IRouteParams> = ({ match }) => {
     if (alreadySelected >= 0) {
       const filtered = selectedFrequency.filter((item) => item !== frequency);
       setSelectedFrequency(filtered);
+    } else {
+      setSelectedFrequency((prev) => [...prev, frequency]);
     }
   };
 
@@ -163,7 +165,8 @@ const List: React.FC<IRouteParams> = ({ match }) => {
       <Filters>
         <button
           type="button"
-          className="tag-filter recurrent"
+          className={`tag-filter recurrent
+          ${selectedFrequency.includes("recorrente") && "tag-actived"}`}
           onClick={() => handleFrequencyClick("recorrente")}
         >
           Recorrentes
@@ -171,7 +174,8 @@ const List: React.FC<IRouteParams> = ({ match }) => {
 
         <button
           type="button"
-          className="tag-filter eventual"
+          className={`tag-filter eventual
+          ${selectedFrequency.includes("eventual") && "tag-actived"}`}
           onClick={() => handleFrequencyClick("eventual")}
         >
           Eventuais
