@@ -153,6 +153,15 @@ const List: React.FC<IRouteParams> = ({ match }) => {
     }
   };
 
+  const handleYearSelected = (year: string) => {
+    try {
+      const parseYear = Number(year);
+      setYearSelected(parseYear);
+    } catch (error) {
+      throw new Error("Invalid year value. Is accept - 0 - 12");
+    }
+  };
+
   // -------------------------------------------------
   // Render
   // -------------------------------------------------
