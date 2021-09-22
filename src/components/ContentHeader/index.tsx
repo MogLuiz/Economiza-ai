@@ -5,11 +5,7 @@ import React from "react";
 import { Container, TitleContainer, Controllers } from "./styles";
 
 // Types
-interface IContentHeaderProps {
-  title: string;
-  lineColor: string;
-  children: React.ReactNode;
-}
+import { IContentHeaderProps } from "./types";
 
 const ContentHeader: React.FC<IContentHeaderProps> = ({
   title,
