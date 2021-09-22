@@ -5,14 +5,7 @@ import React from "react";
 import { Container } from "./styles";
 
 // Types
-interface ISelectInputProps {
-  options: {
-    value: string | number;
-    label: string | number;
-  }[];
-  onChange(event: React.ChangeEvent<HTMLSelectElement>): void | undefined;
-  defaultValue?: string | number;
-}
+import { ISelectInputProps } from "./types";
 
 const SelectInput: React.FC<ISelectInputProps> = ({
   options,
