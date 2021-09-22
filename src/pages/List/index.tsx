@@ -109,7 +109,11 @@ const List: React.FC<IRouteParams> = ({ match }) => {
         const month = String(date.getMonth() + 1);
         const year = String(date.getFullYear());
 
-        return month === monthSelected && year === yearSelected;
+        return (
+          month === monthSelected &&
+          year === yearSelected &&
+          selectedFrequency.includes(item.frequency)
+        );
       });
 
       const formattedDate = filteredDate.map((item) => {
@@ -125,7 +129,7 @@ const List: React.FC<IRouteParams> = ({ match }) => {
       setData(formattedDate);
     }
     getData();
-  }, [data.length, listData, monthSelected, yearSelected]);
+  }, [data.length, listData, monthSelected, selectedFrequency, yearSelected]);
 
   // -------------------------------------------------
   // Functions
