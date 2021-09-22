@@ -16,26 +16,11 @@ import SelectInput from "../../components/SelectInput";
 import gains from "../../repositories/gains";
 import expenses from "../../repositories/expenses";
 
+// Types
+import { IData, IRouteParams } from "./types";
+
 // Styles
 import { Container, Content, Filters } from "./style";
-
-// Types
-interface IRouteParams {
-  match: {
-    params: {
-      type: string;
-    };
-  };
-}
-
-interface IData {
-  id: number | string;
-  title: string;
-  amountFormatted: string;
-  frequency: string;
-  dataFormatted: string;
-  tagColor: string;
-}
 
 const List: React.FC<IRouteParams> = ({ match }) => {
   // -------------------------------------------------
