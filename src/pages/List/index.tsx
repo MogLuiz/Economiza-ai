@@ -137,6 +137,8 @@ const List: React.FC<IRouteParams> = ({ match }) => {
     );
 
     if (alreadySelected >= 0) {
+      const filtered = selectedFrequency.filter((item) => item !== frequency);
+      setSelectedFrequency(filtered);
     }
   };
 
