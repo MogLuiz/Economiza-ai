@@ -1,4 +1,7 @@
 // Packages
 import styled from 'styled-components'
 
-export const Container = styled.div``
+// Types
+import { IContainerProps } from './types'
+
+export const Container = styled.div<IContainerProps>``
