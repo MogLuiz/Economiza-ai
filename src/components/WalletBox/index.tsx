@@ -2,7 +2,7 @@
 import React from "react";
 
 // Assets
-import dollarImg from "../../assets/dollar.svg";
+import dolarImg from "../../assets/dolar.svg";
 import arrowUpImg from "../../assets/arrow-up.svg";
 import arrowDownImg from "../../assets/arrow-down.svg";
 
@@ -20,6 +20,23 @@ const WalletBox: React.FC<IWalletBoxProps> = ({
   color,
 }) => {
   // -------------------------------------------------
+  // Functions
+  // -------------------------------------------------
+
+  const iconSelected = () => {
+    switch (icon) {
+      case "dolar":
+        return dolarImg;
+      case "arrowUp":
+        return arrowUpImg;
+      case "arrowDown":
+        return arrowDownImg;
+      default:
+        return undefined;
+    }
+  };
+
+  // -------------------------------------------------
   // Render
   // -------------------------------------------------
   return (
@@ -27,7 +44,7 @@ const WalletBox: React.FC<IWalletBoxProps> = ({
       <span>{title}</span>
       <h1>{amount}</h1>
       <small>{footerlabel}</small>
-      <img src={dollarImg} alt={title} />
+      <img src={iconSelected()} alt={title} />
     </Container>
   );
 };
