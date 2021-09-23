@@ -1,6 +1,9 @@
 // Packages
 import React from "react";
 
+// Types
+import { IWalletBoxProps } from "./types";
+
 // Style
 import { Container } from "./styles";
 
