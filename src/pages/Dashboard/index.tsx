@@ -108,6 +108,20 @@ const Dashboard: React.FC = () => {
           icon="dolar"
           color="#4E41F0"
         />
+        <WalletBox
+          title="entradas"
+          amount={5000.0}
+          footerlabel="Atualizado com base nas entradas e saídas"
+          icon="arrowUp"
+          color="#F7931B"
+        />
+        <WalletBox
+          title="saídas"
+          amount={4850.0}
+          footerlabel="Atualizado com base nas entradas e saídas"
+          icon="arrowDown"
+          color="#E44C4E"
+        />
       </Content>
     </Container>
   );
