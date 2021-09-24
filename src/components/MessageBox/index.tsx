@@ -18,7 +18,11 @@ const MessageBox: React.FC = () => {
           Muito bem!
           <img src={happyImg} alt="" />
         </h1>
+        <p>Sua carteira está positiva!</p>
       </header>
+      <footer>
+        <span>Continue assim. Considere investir o saldo.</span>
+      </footer>
     </Container>
   );
 };
