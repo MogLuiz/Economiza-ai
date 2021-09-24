@@ -5,6 +5,7 @@ import React, { useMemo, useState } from "react";
 import SelectInput from "../../components/SelectInput";
 import ContentHeader from "../../components/ContentHeader";
 import WalletBox from "../../components/WalletBox";
+import MessageBox from "../../components/MessageBox";
 
 // Utils
 import listOfMonths from "../../utils/months";
@@ -13,7 +14,7 @@ import listOfMonths from "../../utils/months";
 import gains from "../../repositories/gains";
 import expenses from "../../repositories/expenses";
 
-// Style
+// Styles
 import { Container, Content } from "./style";
 
 const Dashboard: React.FC = () => {
@@ -122,6 +123,8 @@ const Dashboard: React.FC = () => {
           icon="arrowDown"
           color="#E44C4E"
         />
+
+        <MessageBox />
       </Content>
     </Container>
   );
