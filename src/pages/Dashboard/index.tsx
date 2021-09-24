@@ -10,6 +10,10 @@ import MessageBox from "../../components/MessageBox";
 // Utils
 import listOfMonths from "../../utils/months";
 
+// Assets
+import happyImg from "../../assets/happy.svg";
+import sadImg from "../../assets/sad.svg";
+
 // Data
 import gains from "../../repositories/gains";
 import expenses from "../../repositories/expenses";
@@ -124,7 +128,12 @@ const Dashboard: React.FC = () => {
           color="#E44C4E"
         />
 
-        <MessageBox />
+        <MessageBox
+          title="Muito bem!"
+          description="Sua carteira está positiva"
+          footerText="Continue assim. Considere investir seu saldo."
+          icon={happyImg}
+        />
       </Content>
     </Container>
   );
