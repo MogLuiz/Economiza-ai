@@ -4,10 +4,13 @@ import React from "react";
 // Assets
 import happyImg from "../../assets/happy.svg";
 
+// Types
+import { IMessageBoxProps } from "./types";
+
 // Style
 import { Container } from "./styles";
 
-const MessageBox: React.FC = () => {
+const MessageBox: React.FC<IMessageBoxProps> = () => {
   // -------------------------------------------------
   // Render
   // -------------------------------------------------
