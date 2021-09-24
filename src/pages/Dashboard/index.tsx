@@ -85,6 +85,26 @@ const Dashboard: React.FC = () => {
     return total;
   }, [monthSelected, yearSelected]);
 
+  const totalGains = useMemo(() => {
+    let total: number = 0;
+
+    gains.forEach((item) => {
+      const date = new Date(item.date);
+      const year = date.getFullYear();
+      const month = date.getMonth() + 1;
+
+      if (month === monthSelected && year === yearSelected) {
+        try {
+          total += Number(item.amount);
+        } catch {
+          throw new Error("Invalid amount! Amount must be number.");
+        }
+      }
+    });
+
+    return total;
+  }, [monthSelected, yearSelected]);
+
   // -------------------------------------------------
   // Functions
   // -------------------------------------------------
@@ -135,7 +155,7 @@ const Dashboard: React.FC = () => {
         />
         <WalletBox
           title="entradas"
-          amount={5000.0}
+          amount={totalGains}
           footerlabel="Atualizado com base nas entradas e saídas"
           icon="arrowUp"
           color="#F7931B"
