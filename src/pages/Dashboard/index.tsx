@@ -65,6 +65,26 @@ const Dashboard: React.FC = () => {
     });
   }, []);
 
+  const totalExpenses = useMemo(() => {
+    let total: number = 0;
+
+    expenses.forEach((item) => {
+      const date = new Date(item.date);
+      const year = date.getFullYear();
+      const month = date.getMonth() + 1;
+
+      if (month === monthSelected && year === yearSelected) {
+        try {
+          total += Number(item.amount);
+        } catch {
+          throw new Error("Invalid amount! Amount must be number.");
+        }
+      }
+    });
+
+    return total;
+  }, [monthSelected, yearSelected]);
+
   // -------------------------------------------------
   // Functions
   // -------------------------------------------------
@@ -73,7 +93,7 @@ const Dashboard: React.FC = () => {
     try {
       const parseMonth = Number(month);
       setMonthSelected(parseMonth);
-    } catch (error) {
+    } catch {
       throw new Error("Invalid month value. Is accept - 0 - 24.");
     }
   };
@@ -82,7 +102,7 @@ const Dashboard: React.FC = () => {
     try {
       const parseYear = Number(year);
       setYearSelected(parseYear);
-    } catch (error) {
+    } catch {
       throw new Error("Invalid year value. Is accept - 0 - 12");
     }
   };
@@ -122,7 +142,7 @@ const Dashboard: React.FC = () => {
         />
         <WalletBox
           title="saídas"
-          amount={4850.0}
+          amount={totalExpenses}
           footerlabel="Atualizado com base nas entradas e saídas"
           icon="arrowDown"
           color="#E44C4E"
