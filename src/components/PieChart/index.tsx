@@ -17,7 +17,12 @@ const PieChartComponent: React.FC = () => (
   // -------------------------------------------------
   <Container>
     <SideLeft>
+      <h2>Relação</h2>
       <LegendContainer>
+        <Legend>
+          <div>5%</div>
+          <span>Entradas</span>
+        </Legend>
         <Legend>
           <div>95%</div>
           <span>Saídas</span>
