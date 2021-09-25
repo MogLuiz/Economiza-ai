@@ -13,6 +13,7 @@ import listOfMonths from "../../utils/months";
 // Assets
 import happyImg from "../../assets/happy.svg";
 import sadImg from "../../assets/sad.svg";
+import grinningImg from "../../assets/grinning.svg";
 
 // Data
 import gains from "../../repositories/gains";
@@ -125,7 +126,7 @@ const Dashboard: React.FC = () => {
         title: "Ufaa!",
         description: "Neste mês, você gastou exatamente o que ganhou.",
         footerText: "Tenha cuidado. No próximo mês tente poupar seu dinheiro.",
-        icon: happyImg,
+        icon: grinningImg,
       };
     } else {
       return {
