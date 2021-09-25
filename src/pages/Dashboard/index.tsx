@@ -7,6 +7,7 @@ import ContentHeader from "../../components/ContentHeader";
 import WalletBox from "../../components/WalletBox";
 import MessageBox from "../../components/MessageBox";
 import PieChartBox from "../../components/PieChartBox";
+import HistoryBox from "../../components/HistoryBox";
 
 // Utils
 import listOfMonths from "../../utils/months";
@@ -234,6 +235,7 @@ const Dashboard: React.FC = () => {
         />
 
         <PieChartBox data={relationExpensesVersusGains} />
+        <HistoryBox />
       </Content>
     </Container>
   );
