@@ -1,4 +1,8 @@
+// Packages
 import styled from "styled-components";
+
+// Types
+import { ILegendProps } from './types'
 
 export const Container = styled.div `
 
@@ -31,7 +35,7 @@ export const LegendContainer = styled.ul`
 
 `
 
-export const Legend = styled.li`
+export const Legend = styled.li<ILegendProps>`
 
 
 
