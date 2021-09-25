@@ -11,10 +11,17 @@ import {
   Tooltip,
 } from "recharts";
 
+// Types
+import { IHistoryBoxProps } from "./types";
+
 // Style
 import { Container } from "./styles";
 
-const HistoryBox: React.FC = () => (
+const HistoryBox: React.FC<IHistoryBoxProps> = ({
+  data,
+  lineColorAmountEntry,
+  lineColorAmountOutput,
+}) => (
   // -------------------------------------------------
   // Render
   // -------------------------------------------------
