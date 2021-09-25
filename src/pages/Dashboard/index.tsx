@@ -199,6 +199,13 @@ const Dashboard: React.FC = () => {
           }
         }
       });
+
+      return {
+        monthNumber: index,
+        month: listOfMonths[index].substr(0, 3),
+        amountEntry,
+        amountOutput,
+      };
     });
   }, [yearSelected]);
 
