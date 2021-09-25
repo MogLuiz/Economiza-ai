@@ -149,13 +149,13 @@ const Dashboard: React.FC = () => {
       {
         name: "Entradas",
         value: totalGains,
-        percent: percentGains.toFixed(1),
+        percent: Number(percentGains.toFixed(1)),
         color: "#E44C4E",
       },
       {
         name: "Saídas",
         value: totalExpenses,
-        percent: percentExpenses.toFixed(1),
+        percent: Number(percentExpenses.toFixed(1)),
         color: "#F7931B",
       },
     ];
@@ -233,7 +233,7 @@ const Dashboard: React.FC = () => {
           icon={message.icon}
         />
 
-        <PieChartComponent />
+        <PieChartComponent data={relationExpensesVersusGains} />
       </Content>
     </Container>
   );

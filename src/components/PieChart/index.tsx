@@ -2,6 +2,9 @@
 import React from "react";
 import { Pie, PieChart, Cell, ResponsiveContainer } from "recharts";
 
+// Types
+import { IPieChartProps } from "./types";
+
 // Style
 import {
   Container,
@@ -11,7 +14,7 @@ import {
   Legend,
 } from "./styles";
 
-const PieChartComponent: React.FC = () => (
+const PieChartComponent: React.FC<IPieChartProps> = ({ data }) => (
   // -------------------------------------------------
   // Render
   // -------------------------------------------------
