@@ -164,6 +164,27 @@ const Dashboard: React.FC = () => {
     return data;
   }, [totalExpenses, totalGains]);
 
+  const historyData = useMemo(() => {
+    return listOfMonths.map((_, index) => {
+      let amountEntry = 0;
+      gains.forEach((gain) => {
+        const date = new Date(gain.date);
+        const gainMonth = date.getMonth();
+        const gainYear = date.getFullYear();
+
+        if (gainMonth === index && gainYear === yearSelected) {
+          try {
+            amountEntry += Number(gain.amount);
+          } catch {
+            throw new Error(
+              "amountEntry is invalid. amountEntry must be valid number."
+            );
+          }
+        }
+      });
+    });
+  }, []);
+
   // -------------------------------------------------
   // Functions
   // -------------------------------------------------
