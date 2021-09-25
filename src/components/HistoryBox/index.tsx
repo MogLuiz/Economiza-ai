@@ -29,7 +29,7 @@ const HistoryBox: React.FC<IHistoryBoxProps> = ({
     <h2>Histórico de saldo</h2>
 
     <ResponsiveContainer>
-      <LineChart data={[]}>
+      <LineChart data={data}>
         <CartesianGrid strokeDasharray="3 3" stroke="#cecece" />
         <XAxis dataKey="month" stroke="#cecece" />
         <Tooltip />
@@ -37,7 +37,7 @@ const HistoryBox: React.FC<IHistoryBoxProps> = ({
           type="monotone"
           dataKey="amountEntry"
           name="Entradas"
-          stroke="#F7931B"
+          stroke={lineColorAmountEntry}
           strokeWidth={5}
           dot={{ r: 5 }}
           activeDot={{ r: 8 }}
@@ -46,7 +46,7 @@ const HistoryBox: React.FC<IHistoryBoxProps> = ({
           type="monotone"
           dataKey="amountOutput"
           name="Saídas"
-          stroke="#E44C4E"
+          stroke={lineColorAmountOutput}
           strokeWidth={5}
           dot={{ r: 5 }}
           activeDot={{ r: 8 }}

@@ -235,7 +235,7 @@ const Dashboard: React.FC = () => {
         />
 
         <PieChartBox data={relationExpensesVersusGains} />
-        <HistoryBox />
+        <HistoryBox data={} lineColorAmountEntry={} lineColorAmountOutput={} />
       </Content>
     </Container>
   );
