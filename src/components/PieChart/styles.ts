@@ -37,7 +37,9 @@ export const LegendContainer = styled.ul`
 
 export const Legend = styled.li<ILegendProps>`
 
-
+    > div {
+        background-color: ${props => props.color};
+    }
 
 `
 
