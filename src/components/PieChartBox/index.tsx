@@ -14,7 +14,7 @@ import {
   Legend,
 } from "./styles";
 
-const PieChartComponent: React.FC<IPieChartProps> = ({ data }) => (
+const PieChartBox: React.FC<IPieChartProps> = ({ data }) => (
   // -------------------------------------------------
   // Render
   // -------------------------------------------------
@@ -32,19 +32,17 @@ const PieChartComponent: React.FC<IPieChartProps> = ({ data }) => (
     </SideLeft>
 
     <SideRight>
-      {/* <ResponsiveContainer>
+      <ResponsiveContainer>
         <PieChart>
-          <Pie
-            data={[{ amount: 30, percent: 95 }]}
-            labelLine={false}
-            dataKey="percent"
-          >
-            {}
+          <Pie data={data} dataKey="percent">
+            {data.map((item) => (
+              <Cell key={item.name} fill={item.color} />
+            ))}
           </Pie>
         </PieChart>
-      </ResponsiveContainer> */}
+      </ResponsiveContainer>
     </SideRight>
   </Container>
 );
 
-export default PieChartComponent;
+export default PieChartBox;

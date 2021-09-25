@@ -6,7 +6,7 @@ import SelectInput from "../../components/SelectInput";
 import ContentHeader from "../../components/ContentHeader";
 import WalletBox from "../../components/WalletBox";
 import MessageBox from "../../components/MessageBox";
-import PieChartComponent from "../../components/PieChart";
+import PieChartBox from "../../components/PieChartBox";
 
 // Utils
 import listOfMonths from "../../utils/months";
@@ -233,7 +233,7 @@ const Dashboard: React.FC = () => {
           icon={message.icon}
         />
 
-        <PieChartComponent data={relationExpensesVersusGains} />
+        <PieChartBox data={relationExpensesVersusGains} />
       </Content>
     </Container>
   );
