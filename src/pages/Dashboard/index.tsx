@@ -109,6 +109,34 @@ const Dashboard: React.FC = () => {
     return totalGains - totalExpenses;
   }, [totalExpenses, totalGains]);
 
+  const message = useMemo(() => {
+    if (totalBalance < 0) {
+      return {
+        title: "Que triste!",
+        description: "Neste mês, você gastou mais do que deveria.",
+        footerText:
+          "Verifique seus gastos e tente cortar algumas coisas desnecessárias.",
+        icon: sadImg,
+      };
+    }
+
+    if (totalBalance === 0) {
+      return {
+        title: "Ufaa!",
+        description: "Neste mês, você gastou exatamente o que ganhou.",
+        footerText: "Tenha cuidado. No próximo mês tente poupar seu dinheiro.",
+        icon: happyImg,
+      };
+    } else {
+      return {
+        title: "Muito bem!",
+        description: "Sua carteira está positiva.",
+        footerText: "Continue assim. Considere investir seu saldo.",
+        icon: happyImg,
+      };
+    }
+  }, [totalBalance]);
+
   // -------------------------------------------------
   // Functions
   // -------------------------------------------------
@@ -173,10 +201,10 @@ const Dashboard: React.FC = () => {
         />
 
         <MessageBox
-          title="Muito bem!"
-          description="Sua carteira está positiva"
-          footerText="Continue assim. Considere investir seu saldo."
-          icon={happyImg}
+          title={message.title}
+          description={message.description}
+          footerText={message.footerText}
+          icon={message.icon}
         />
       </Content>
     </Container>
