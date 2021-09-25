@@ -3,9 +3,15 @@ import React from "react";
 import { Pie, PieChart, Cell, ResponsiveContainer } from "recharts";
 
 // Style
-import { Container } from "./styles";
+import {
+  Container,
+  SideRight,
+  SideLeft,
+  LegendContainer,
+  Legend,
+} from "./styles";
 
-const PieChart: React.FC = () => (
+const PieChartComponent: React.FC = () => (
   // -------------------------------------------------
   // Render
   // -------------------------------------------------
@@ -20,7 +26,7 @@ const PieChart: React.FC = () => (
     </SideLeft>
 
     <SideRight>
-      <ResponsiveContainer>
+      {/* <ResponsiveContainer>
         <PieChart>
           <Pie
             data={[{ amount: 30, percent: 95 }]}
@@ -30,9 +36,9 @@ const PieChart: React.FC = () => (
             {}
           </Pie>
         </PieChart>
-      </ResponsiveContainer>
+      </ResponsiveContainer> */}
     </SideRight>
   </Container>
 );
 
-export default PieChart;
+export default PieChartComponent;
