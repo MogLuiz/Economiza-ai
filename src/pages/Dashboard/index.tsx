@@ -182,8 +182,25 @@ const Dashboard: React.FC = () => {
           }
         }
       });
+
+      let amountOutput = 0;
+      expenses.forEach((expense) => {
+        const date = new Date(expense.date);
+        const expenseMonth = date.getMonth();
+        const expenseYear = date.getFullYear();
+
+        if (expenseMonth === index && expenseYear === yearSelected) {
+          try {
+            amountOutput += Number(expense.amount);
+          } catch {
+            throw new Error(
+              "amountOutput is invalid. amountOutput must be valid number."
+            );
+          }
+        }
+      });
     });
-  }, []);
+  }, [yearSelected]);
 
   // -------------------------------------------------
   // Functions
