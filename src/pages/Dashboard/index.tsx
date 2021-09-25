@@ -139,6 +139,30 @@ const Dashboard: React.FC = () => {
     }
   }, [totalBalance]);
 
+  const relationExpensesVersusGains = useMemo(() => {
+    const total = totalGains + totalExpenses;
+
+    const percentGains = (totalGains / total) * 100;
+    const percentExpenses = (totalExpenses / total) * 100;
+
+    const data = [
+      {
+        name: "Entradas",
+        value: totalGains,
+        percent: percentGains.toFixed(1),
+        color: "#E44C4E",
+      },
+      {
+        name: "Saídas",
+        value: totalExpenses,
+        percent: percentExpenses.toFixed(1),
+        color: "#F7931B",
+      },
+    ];
+
+    return data;
+  }, [totalExpenses, totalGains]);
+
   // -------------------------------------------------
   // Functions
   // -------------------------------------------------
