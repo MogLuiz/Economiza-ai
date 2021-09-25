@@ -27,6 +27,18 @@ const PieChartComponent: React.FC = () => (
           <div>95%</div>
           <span>Saídas</span>
         </Legend>
+        <Legend color="#E44C4E">
+          <div>95%</div>
+          <span>Saídas</span>
+        </Legend>
+        <Legend color="#E44C4E">
+          <div>95%</div>
+          <span>Saídas</span>
+        </Legend>
+        <Legend color="#E44C4E">
+          <div>95%</div>
+          <span>Saídas</span>
+        </Legend>
       </LegendContainer>
     </SideLeft>
 
