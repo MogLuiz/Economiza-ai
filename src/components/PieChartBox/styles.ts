@@ -68,7 +68,7 @@ export const Legend = styled.li<ILegendProps>`
 
         border-radius: 5px;
 
-        font-size: 18px;
+        font-size: 14px;
         line-height: 40px; // Line Height do tamanho da caixa centraliza o elemento no eixo Y
         text-align: center;
 
@@ -87,5 +87,6 @@ export const SideRight = styled.main`
     display: flex;
     flex: 1;
     justify-content: center;
-
+    
+    
 `
