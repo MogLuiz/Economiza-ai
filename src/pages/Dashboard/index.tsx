@@ -6,6 +6,7 @@ import SelectInput from "../../components/SelectInput";
 import ContentHeader from "../../components/ContentHeader";
 import WalletBox from "../../components/WalletBox";
 import MessageBox from "../../components/MessageBox";
+import PieChartComponent from "../../components/PieChart";
 
 // Utils
 import listOfMonths from "../../utils/months";
@@ -207,6 +208,8 @@ const Dashboard: React.FC = () => {
           footerText={message.footerText}
           icon={message.icon}
         />
+
+        <PieChartComponent />
       </Content>
     </Container>
   );
