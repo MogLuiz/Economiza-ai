@@ -22,10 +22,12 @@ const PieChartComponent: React.FC<IPieChartProps> = ({ data }) => (
     <SideLeft>
       <h2>Relação</h2>
       <LegendContainer>
-        <Legend color="#F7931B">
-          <div>5%</div>
-          <span>Entradas</span>
-        </Legend>
+        {data.map((item) => (
+          <Legend key={item.name} color={item.color}>
+            <div>{item.percent}</div>
+            <span>{item.name}</span>
+          </Legend>
+        ))}
       </LegendContainer>
     </SideLeft>
 
