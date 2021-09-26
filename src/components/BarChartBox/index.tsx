@@ -1,10 +1,13 @@
 // Packages
 import React from "react";
 
+// Types
+import { IBarChartProps } from "./types";
+
 // Style
 import { Container, SideLeft, SideRight } from "./styles";
 
-const BarChartBox: React.FC = () => {
+const BarChartBox: React.FC<IBarChartProps> = ({ title, data }) => {
   // -------------------------------------------------
   // Render
   // -------------------------------------------------
