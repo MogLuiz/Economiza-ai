@@ -1,4 +1,8 @@
+// packages
 import styled from "styled-components";
+
+// types
+import { ILegendProps } from './types'
 
 export const Container = styled.div`
 
@@ -41,7 +45,7 @@ export const LegendContainer = styled.ul`
     list-style: none;
 
 `
-export const Legend = styled.li`
+export const Legend = styled.li<ILegendProps>`
 
     display: flex;
     align-items: center;

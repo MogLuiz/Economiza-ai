@@ -1,3 +1,6 @@
+// -------------------------------------------------
+// index.tsx
+// -------------------------------------------------
 export interface IHistoryBoxProps {
     data: {
         month: string;
@@ -6,4 +9,11 @@ export interface IHistoryBoxProps {
     }[],
     lineColorAmountEntry: string;
     lineColorAmountOutput: string;
+}
+
+// -------------------------------------------------
+// styles.ts
+// -------------------------------------------------
+export interface ILegendProps {
+    color: string;
 }
