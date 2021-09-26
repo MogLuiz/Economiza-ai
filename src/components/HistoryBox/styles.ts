@@ -44,13 +44,17 @@ export const LegendContainer = styled.ul`
 
     list-style: none;
 
+    display: flex;
+
 `
 export const Legend = styled.li<ILegendProps>`
 
     display: flex;
     align-items: center;
 
-    margin-bottom: 7px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    padding-right: 16px;
 
     > div {
 
