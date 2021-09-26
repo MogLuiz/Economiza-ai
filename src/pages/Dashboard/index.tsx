@@ -238,6 +238,23 @@ const Dashboard: React.FC = () => {
           return (amountEventual += Number(expense.amount));
         }
       });
+
+    const total = amountRecurrent + amountEventual;
+
+    return [
+      {
+        name: "Recorrentes",
+        amount: amountRecurrent,
+        percent: Number(((amountRecurrent / total) * 100).toFixed(1)),
+        color: "#F7931B",
+      },
+      {
+        name: "Eventuais",
+        amount: amountEventual,
+        percent: Number(((amountEventual / total) * 100).toFixed(1)),
+        color: "#F7931B",
+      },
+    ];
   }, [monthSelected, yearSelected]);
 
   // -------------------------------------------------
