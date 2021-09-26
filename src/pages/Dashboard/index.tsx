@@ -334,7 +334,10 @@ const Dashboard: React.FC = () => {
           lineColorAmountEntry="#F7931B"
           lineColorAmountOutput="#E44C4E"
         />
-        <BarChartBox />
+        <BarChartBox
+          data={relationExpensevesRecurrentVesusEventual}
+          title="Saídas"
+        />
       </Content>
     </Container>
   );

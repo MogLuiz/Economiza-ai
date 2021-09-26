@@ -5,5 +5,5 @@ export interface IBarChartProps {
         amount: number;
         percent: number;
         color: string;
-    }
+    }[]
 }

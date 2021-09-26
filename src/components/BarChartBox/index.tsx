@@ -1,6 +1,9 @@
 // Packages
 import React from "react";
 
+// Component
+import { ResponsiveContainer, BarChart, Bar, Cell, Tooltip } from "recharts";
+
 // Types
 import { IBarChartProps } from "./types";
 
@@ -11,10 +14,11 @@ const BarChartBox: React.FC<IBarChartProps> = ({ title, data }) => {
   // -------------------------------------------------
   // Render
   // -------------------------------------------------
+
   return (
     <Container>
       <SideLeft>
-        <h2>Saídas</h2>
+        <h2>{title}</h2>
       </SideLeft>
 
       <SideRight></SideRight>
