@@ -15,15 +15,57 @@ export const Container = styled.div`
 
     border-radius: 7px;
 
+`
+
+export const ChartContainer = styled.div`
+
+    height: 260px;
+
+`
+
+export const Header = styled.header`
+
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+
     > h2 {
         margin-bottom: 20px;
         padding-left: 16px;
     }
 
 `
+export const LegendContainer = styled.ul`
 
-export const ChartContainer = styled.div`
+    list-style: none;
 
-    height: 260px;
+`
+export const Legend = styled.li`
+
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 7px;
+
+    > div {
+
+        background-color: ${props => props.color};
+
+        width: 40px;
+        height: 40px;
+
+        border-radius: 5px;
+
+        font-size: 14px;
+        line-height: 40px; // Line Height do tamanho da caixa centraliza o elemento no eixo Y
+        text-align: center;
+
+    }
+
+    > span {
+
+        margin-left: 5px;
+    }
 
 `

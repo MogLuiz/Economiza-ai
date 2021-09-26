@@ -15,7 +15,13 @@ import {
 import { IHistoryBoxProps } from "./types";
 
 // Style
-import { Container, ChartContainer } from "./styles";
+import {
+  Container,
+  ChartContainer,
+  Header,
+  LegendContainer,
+  Legend,
+} from "./styles";
 
 const HistoryBox: React.FC<IHistoryBoxProps> = ({
   data,
@@ -26,7 +32,17 @@ const HistoryBox: React.FC<IHistoryBoxProps> = ({
   // Render
   // -------------------------------------------------
   <Container>
-    <h2>Histórico de saldo</h2>
+    <Header>
+      <h2>Histórico de saldo</h2>
+
+      <LegendContainer>
+        <Legend>
+          <div>30%</div>
+          <span>Saídas</span>
+        </Legend>
+      </LegendContainer>
+    </Header>
+
     <ChartContainer>
       <ResponsiveContainer>
         <LineChart
