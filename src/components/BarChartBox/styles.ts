@@ -19,6 +19,7 @@ export const SideLeft = styled.aside`
     padding: 30px 20px;
 
     > h2 {
+        padding-left: 16px;
         margin-bottom: 10px;
     }
 
@@ -27,5 +28,7 @@ export const SideLeft = styled.aside`
 export const SideRight = styled.main`
 
     flex: 1;
+
+    height: 150px;
 
 `

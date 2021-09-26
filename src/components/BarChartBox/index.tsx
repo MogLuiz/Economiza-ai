@@ -14,14 +14,24 @@ const BarChartBox: React.FC<IBarChartProps> = ({ title, data }) => {
   // -------------------------------------------------
   // Render
   // -------------------------------------------------
-
+  console.log(data);
   return (
     <Container>
       <SideLeft>
         <h2>{title}</h2>
       </SideLeft>
 
-      <SideRight></SideRight>
+      <SideRight>
+        <ResponsiveContainer>
+          <BarChart data={data}>
+            <Bar dataKey="amount">
+              {data.map((item) => (
+                <Cell key={item.name} fill={item.color} />
+              ))}
+            </Bar>
+          </BarChart>
+        </ResponsiveContainer>
+      </SideRight>
     </Container>
   );
 };
