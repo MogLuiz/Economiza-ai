@@ -165,48 +165,58 @@ const Dashboard: React.FC = () => {
   }, [totalExpenses, totalGains]);
 
   const historyData = useMemo(() => {
-    return listOfMonths.map((_, index) => {
-      let amountEntry = 0;
-      gains.forEach((gain) => {
-        const date = new Date(gain.date);
-        const gainMonth = date.getMonth();
-        const gainYear = date.getFullYear();
+    return listOfMonths
+      .map((_, index) => {
+        let amountEntry = 0;
+        gains.forEach((gain) => {
+          const date = new Date(gain.date);
+          const gainMonth = date.getMonth();
+          const gainYear = date.getFullYear();
 
-        if (gainMonth === index && gainYear === yearSelected) {
-          try {
-            amountEntry += Number(gain.amount);
-          } catch {
-            throw new Error(
-              "amountEntry is invalid. amountEntry must be valid number."
-            );
+          if (gainMonth === index && gainYear === yearSelected) {
+            try {
+              amountEntry += Number(gain.amount);
+            } catch {
+              throw new Error(
+                "amountEntry is invalid. amountEntry must be valid number."
+              );
+            }
           }
-        }
-      });
+        });
 
-      let amountOutput = 0;
-      expenses.forEach((expense) => {
-        const date = new Date(expense.date);
-        const expenseMonth = date.getMonth();
-        const expenseYear = date.getFullYear();
+        let amountOutput = 0;
+        expenses.forEach((expense) => {
+          const date = new Date(expense.date);
+          const expenseMonth = date.getMonth();
+          const expenseYear = date.getFullYear();
 
-        if (expenseMonth === index && expenseYear === yearSelected) {
-          try {
-            amountOutput += Number(expense.amount);
-          } catch {
-            throw new Error(
-              "amountOutput is invalid. amountOutput must be valid number."
-            );
+          if (expenseMonth === index && expenseYear === yearSelected) {
+            try {
+              amountOutput += Number(expense.amount);
+            } catch {
+              throw new Error(
+                "amountOutput is invalid. amountOutput must be valid number."
+              );
+            }
           }
-        }
-      });
+        });
 
-      return {
-        monthNumber: index,
-        month: listOfMonths[index].substr(0, 3),
-        amountEntry,
-        amountOutput,
-      };
-    });
+        return {
+          monthNumber: index,
+          month: listOfMonths[index].substr(0, 3),
+          amountEntry,
+          amountOutput,
+        };
+      })
+      .filter((item) => {
+        const currentMonth = new Date().getMonth();
+        const currentYear = new Date().getFullYear();
+
+        return (
+          (yearSelected === currentYear && item.monthNumber <= currentMonth) ||
+          yearSelected < currentYear
+        );
+      });
   }, [yearSelected]);
 
   // -------------------------------------------------
