@@ -2,13 +2,21 @@
 import React from "react";
 
 // Style
-import { Container } from "./styles";
+import { Container, SideLeft, SideRight } from "./styles";
 
 const BarChartBox: React.FC = () => {
   // -------------------------------------------------
   // Render
   // -------------------------------------------------
-  return <Container></Container>;
+  return (
+    <Container>
+      <SideLeft>
+        <h2>Gráfico de Barras</h2>
+      </SideLeft>
+
+      <SideRight></SideRight>
+    </Container>
+  );
 };
 
 export default BarChartBox;

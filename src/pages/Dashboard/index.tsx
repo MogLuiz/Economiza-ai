@@ -8,6 +8,7 @@ import WalletBox from "../../components/WalletBox";
 import MessageBox from "../../components/MessageBox";
 import PieChartBox from "../../components/PieChartBox";
 import HistoryBox from "../../components/HistoryBox";
+import BarChartBox from "../../components/BarChartBox";
 
 // Utils
 import listOfMonths from "../../utils/months";
@@ -333,6 +334,7 @@ const Dashboard: React.FC = () => {
           lineColorAmountEntry="#F7931B"
           lineColorAmountOutput="#E44C4E"
         />
+        <BarChartBox />
       </Content>
     </Container>
   );
