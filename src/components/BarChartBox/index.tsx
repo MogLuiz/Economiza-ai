@@ -11,7 +11,7 @@ const BarChartBox: React.FC = () => {
   return (
     <Container>
       <SideLeft>
-        <h2>Gráfico de Barras</h2>
+        <h2>Saídas</h2>
       </SideLeft>
 
       <SideRight></SideRight>

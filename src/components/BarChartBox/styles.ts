@@ -1,7 +1,31 @@
 import styled from "styled-components";
 
-export const Container = styled.div``
+export const Container = styled.div`
 
-export const SideLeft = styled.aside``
+    width: 48%;
+    min-height: 260px;
 
-export const SideRight = styled.main``
+    margin: 10px 0;
+
+    background-color: ${props => props.theme.colors.tertiary};
+    color: ${props => props.theme.colors.white};
+
+    border-radius: 7px;
+
+`
+
+export const SideLeft = styled.aside`
+
+    padding: 30px 20px;
+
+    > h2 {
+        margin-bottom: 10px;
+    }
+
+`
+
+export const SideRight = styled.main`
+
+    flex: 1;
+
+`
