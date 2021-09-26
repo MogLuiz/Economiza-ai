@@ -1,6 +1,9 @@
 // Packages
 import React from "react";
 
+// Utils
+import formatCurrency from "../../utils/formatCurrency";
+
 // Component
 import { ResponsiveContainer, BarChart, Bar, Cell, Tooltip } from "recharts";
 
@@ -14,7 +17,6 @@ const BarChartBox: React.FC<IBarChartProps> = ({ title, data }) => {
   // -------------------------------------------------
   // Render
   // -------------------------------------------------
-  console.log(data);
   return (
     <Container>
       <SideLeft>
@@ -26,9 +28,12 @@ const BarChartBox: React.FC<IBarChartProps> = ({ title, data }) => {
           <BarChart data={data}>
             <Bar dataKey="amount">
               {data.map((item) => (
-                <Cell key={item.name} fill={item.color} />
+                <Cell key={item.name} fill={item.color} cursor="pointer" />
               ))}
             </Bar>
+            <Tooltip
+              formatter={(value: number) => formatCurrency(Number(value))}
+            />
           </BarChart>
         </ResponsiveContainer>
       </SideRight>
