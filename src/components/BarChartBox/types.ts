@@ -1,3 +1,6 @@
+// -------------------------------------------------
+// index.tsx
+// -------------------------------------------------
 export interface IBarChartProps {
     title: string;
     data: {
@@ -6,4 +9,12 @@ export interface IBarChartProps {
         percent: number;
         color: string;
     }[]
+}
+
+
+// -------------------------------------------------
+// styles.ts
+// -------------------------------------------------
+export interface ILegendProps {
+    color:string;
 }
