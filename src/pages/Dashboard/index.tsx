@@ -144,20 +144,20 @@ const Dashboard: React.FC = () => {
   const relationExpensesVersusGains = useMemo(() => {
     const total = totalGains + totalExpenses;
 
-    const percentGains = (totalGains / total) * 100;
-    const percentExpenses = (totalExpenses / total) * 100;
+    const percentGains = Number(((totalGains / total) * 100).toFixed(1));
+    const percentExpenses = Number(((totalExpenses / total) * 100).toFixed(1));
 
     const data = [
       {
         name: "Entradas",
         value: totalGains,
-        percent: Number(percentGains.toFixed(1)),
+        percent: percentGains ? percentGains : 0,
         color: "#F7931B",
       },
       {
         name: "Saídas",
         value: totalExpenses,
-        percent: Number(percentExpenses.toFixed(1)),
+        percent: percentExpenses ? percentExpenses : 0,
         color: "#E44C4E",
       },
     ];
