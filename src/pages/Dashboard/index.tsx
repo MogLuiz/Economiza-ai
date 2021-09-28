@@ -242,17 +242,23 @@ const Dashboard: React.FC = () => {
 
     const total = amountRecurrent + amountEventual;
 
+    const recurrentPercent = Number(
+      ((amountRecurrent / total) * 100).toFixed(1)
+    );
+
+    const eventualPercent = Number(((amountEventual / total) * 100).toFixed(1));
+
     return [
       {
         name: "Recorrentes",
         amount: amountRecurrent,
-        percent: Number(((amountRecurrent / total) * 100).toFixed(1)),
+        percent: recurrentPercent ? recurrentPercent : 0,
         color: "#F7931B",
       },
       {
         name: "Eventuais",
         amount: amountEventual,
-        percent: Number(((amountEventual / total) * 100).toFixed(1)),
+        percent: eventualPercent ? eventualPercent : 0,
         color: "#E44C4E",
       },
     ];
