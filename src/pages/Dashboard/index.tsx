@@ -122,9 +122,14 @@ const Dashboard: React.FC = () => {
           "Verifique seus gastos e tente cortar algumas coisas desnecessárias.",
         icon: sadImg,
       };
-    }
-
-    if (totalBalance === 0) {
+    } else if (totalGains === 0 && totalExpenses === 0) {
+      return {
+        title: "Opss!",
+        description: "Neste mês não há registros de entrada ou saídas.",
+        footerText: "Você não fez nenhum registro no mês e ano selecionado.",
+        icon: grinningImg,
+      };
+    } else if (totalBalance === 0) {
       return {
         title: "Ufaa!",
         description: "Neste mês, você gastou exatamente o que ganhou.",
@@ -139,7 +144,7 @@ const Dashboard: React.FC = () => {
         icon: happyImg,
       };
     }
-  }, [totalBalance]);
+  }, [totalBalance, totalExpenses, totalGains]);
 
   const relationExpensesVersusGains = useMemo(() => {
     const total = totalGains + totalExpenses;
