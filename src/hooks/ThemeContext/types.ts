@@ -3,7 +3,7 @@ export interface IThemeContext {
     theme: ITheme;
 }
 
-interface ITheme {
+export interface ITheme {
     title: string;
     colors: {
         primary: string;
