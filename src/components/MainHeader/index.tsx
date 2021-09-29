@@ -1,5 +1,5 @@
 // Packages
-import React, { useMemo } from "react";
+import React, { useMemo, useState } from "react";
 
 // Utils
 import emojis from "../../utils/emojis";
@@ -7,10 +7,22 @@ import emojis from "../../utils/emojis";
 // Components
 import Toggle from "../Toggle";
 
+// Hooks
+import { useTheme } from "../../hooks/ThemeContext";
+
 // Style
 import { Container, Profile, Welcome, UserName } from "./styles";
 
 const MainHeader: React.FC = () => {
+  // -------------------------------------------------
+  // Hooks
+  // -------------------------------------------------
+  const { toggleTheme, theme } = useTheme();
+
+  const [darkTheme, setDarkTheme] = useState(() =>
+    theme.title === "dark" ? true : false
+  );
+
   // -------------------------------------------------
   // Hooks
   // -------------------------------------------------
