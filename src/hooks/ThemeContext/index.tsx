@@ -27,3 +27,11 @@ const ThemeProvider: React.FC = ({ children }) => {
     </ThemeContext.Provider>
   );
 };
+
+function useTheme(): IThemeContext {
+  const context = useContext(ThemeContext);
+
+  return context;
+}
+
+export { ThemeProvider, useTheme };
