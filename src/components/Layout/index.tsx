@@ -9,17 +9,15 @@ import Content from "../Content";
 // Style
 import { Grid } from "./styles";
 
-const Layout: React.FC = ({ children }) => {
+const Layout: React.FC = ({ children }) => (
   // -------------------------------------------------
   // Render
   // -------------------------------------------------
-  return (
-    <Grid>
-      <MainHeader />
-      <Aside />
-      <Content>{children}</Content>
-    </Grid>
-  );
-};
+  <Grid>
+    <MainHeader />
+    <Aside />
+    <Content>{children}</Content>
+  </Grid>
+);
 
 export default Layout;
