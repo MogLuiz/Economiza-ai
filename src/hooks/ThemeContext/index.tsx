@@ -20,4 +20,10 @@ const ThemeProvider: React.FC = ({ children }) => {
       setTheme(dark);
     }
   };
+
+  return (
+    <ThemeContext.Provider value={{ toggleTheme, theme }}>
+      {children}
+    </ThemeContext.Provider>
+  );
 };
