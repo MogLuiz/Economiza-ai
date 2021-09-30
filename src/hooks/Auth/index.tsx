@@ -37,4 +37,10 @@ const AuthProvider: React.FC = ({ children }) => {
   // -------------------------------------------------
   // Return
   // -------------------------------------------------
+
+  return (
+    <AuthContext.Provider value={{ logged, signIn, signOut }}>
+      {children}
+    </AuthContext.Provider>
+  );
 };
