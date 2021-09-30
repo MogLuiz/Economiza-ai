@@ -20,11 +20,11 @@ const Signin: React.FC = () => {
         <h2>Economizaê</h2>
       </Logo>
 
-      <Form>
+      <Form onSubmit={() => {}}>
         <FormTitle>Entrar</FormTitle>
 
-        <Input type="text" />
-        <Input type="text" />
+        <Input type="email" required placeholder="E-mail" />
+        <Input type="password" required placeholder="Senha" />
 
         <button type="submit">Acessar</button>
       </Form>
