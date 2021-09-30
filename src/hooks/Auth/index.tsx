@@ -29,6 +29,11 @@ const AuthProvider: React.FC = ({ children }) => {
     }
   };
 
+  const signOut = () => {
+    localStorage.removeItem("@economizae:logged");
+    setLogged(false);
+  };
+
   // -------------------------------------------------
   // Return
   // -------------------------------------------------
