@@ -23,19 +23,31 @@ const MainHeader: React.FC = () => {
     theme.title === "dark" ? true : false
   );
 
-  // -------------------------------------------------
-  // Hooks
-  // -------------------------------------------------
   const emoji = useMemo(() => {
     const indice = Math.floor(Math.random() * emojis.length);
     return emojis[indice];
   }, []);
+
+  // -------------------------------------------------
+  // Function
+  // -------------------------------------------------
+
+  const handleChangeTheme = () => {
+    setDarkTheme(!darkTheme);
+    toggleTheme();
+  };
+
   // -------------------------------------------------
   // Render
   // -------------------------------------------------
   return (
     <Container>
-      <Toggle />
+      <Toggle
+        labelLeft="Light"
+        labelRight="Dark"
+        checked={darkTheme}
+        onChange={handleChangeTheme}
+      />
 
       <Profile>
         <Welcome>Olá,{emoji}</Welcome>
