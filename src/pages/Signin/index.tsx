@@ -14,7 +14,7 @@ const Signin: React.FC = () => {
     <Container>
       <Logo>
         <img src={logoImg} alt="Economizaê" />
-        <h3>Economizaê</h3>
+        <h2>Economizaê</h2>
       </Logo>
 
       <Form>

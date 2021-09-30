@@ -21,7 +21,7 @@ export const Logo = styled.div`
 
     margin-bottom: 30px;
 
-    > h3 {
+    > h2 {
         color: ${props => props.theme.colors.white};
         margin-left: 7px;
     }
@@ -35,13 +35,27 @@ export const Logo = styled.div`
 
 export const Form = styled.form`
 
+    width: 300px;
+    height: 300px;
 
+    padding: 30px;
 
+    border-radius: 10px;
+
+    background-color: ${props => props.theme.colors.tertiary};
+    
 `
 
 export const FormTitle = styled.h1`
 
+    color: ${props => props.theme.colors.white};
 
+    &:after {
+        content: '';
+        display: block;
+        width: 55px;
+        border-bottom: 10px solid ${props => props.theme.colors.warning};
+    }
 
 
 `
