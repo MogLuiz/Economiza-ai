@@ -20,6 +20,15 @@ const AuthProvider: React.FC = ({ children }) => {
   // Functions
   // -------------------------------------------------
 
+  const signIn = (email: string, password: string) => {
+    if (email === "luizhjramos@outlook.com" && password === "12345678") {
+      localStorage.setItem("@economizae:logged", "true");
+      setLogged(true);
+    } else {
+      alert("Senha ou usuário inválidos!");
+    }
+  };
+
   // -------------------------------------------------
   // Return
   // -------------------------------------------------
