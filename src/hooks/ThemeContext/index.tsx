@@ -11,6 +11,9 @@ import { IThemeContext, ITheme } from "./types";
 const ThemeContext = createContext<IThemeContext>({} as IThemeContext);
 
 const ThemeProvider: React.FC = ({ children }) => {
+  // -------------------------------------------------
+  // States
+  // -------------------------------------------------
   const [theme, setTheme] = useState<ITheme>(() => {
     const themeSaved = localStorage.getItem("@economizae:theme");
 
@@ -20,6 +23,9 @@ const ThemeProvider: React.FC = ({ children }) => {
 
     return dark;
   });
+  // -------------------------------------------------
+  // Functions
+  // -------------------------------------------------
 
   const toggleTheme = () => {
     if (theme.title === "dark") {
@@ -30,6 +36,10 @@ const ThemeProvider: React.FC = ({ children }) => {
       localStorage.setItem("@economizae:theme", JSON.stringify(dark));
     }
   };
+
+  // -------------------------------------------------
+  // Return
+  // -------------------------------------------------
 
   return (
     <ThemeContext.Provider value={{ toggleTheme, theme }}>
