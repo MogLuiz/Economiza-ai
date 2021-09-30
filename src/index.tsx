@@ -2,8 +2,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-// Provider
+// Providers
 import { ThemeProvider } from "./hooks/ThemeContext";
+import { AuthProvider } from "./hooks/Auth";
 
 // Components
 import App from "./App";
@@ -15,7 +16,9 @@ ReactDOM.render(
   // -------------------------------------------------
   <React.StrictMode>
     <ThemeProvider>
-      <App />
+      <AuthProvider>
+        <App />
+      </AuthProvider>
     </ThemeProvider>
   </React.StrictMode>,
   document.getElementById("root")
