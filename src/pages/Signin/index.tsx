@@ -1,6 +1,9 @@
 // Packages
 import React from "react";
 
+// Components
+import Input from "../../components/Input";
+
 // Assets
 import logoImg from "../../assets/logo.svg";
 
@@ -20,8 +23,8 @@ const Signin: React.FC = () => {
       <Form>
         <FormTitle>Entrar</FormTitle>
 
-        <input type="text" />
-        <input type="text" />
+        <Input type="text" />
+        <Input type="text" />
 
         <button type="submit">Acessar</button>
       </Form>
