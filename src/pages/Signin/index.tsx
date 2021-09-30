@@ -1,6 +1,9 @@
 // Packages
 import React, { useState } from "react";
 
+// Hooks
+import { useAuth } from "../../hooks/Auth";
+
 // Components
 import Input from "../../components/Input";
 import Button from "../../components/Button";
@@ -14,9 +17,13 @@ const Signin: React.FC = () => {
   // -------------------------------------------------
   // States
   // -------------------------------------------------
-  const [email, setEmail] = useState<string>();
-  const [password, setPassword] = useState<string>();
+  const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
 
+  // -------------------------------------------------
+  // Hooks
+  // -------------------------------------------------
+  const { signIn } = useAuth();
   // -------------------------------------------------
   // Render
   // -------------------------------------------------
@@ -27,7 +34,7 @@ const Signin: React.FC = () => {
         <h2>Economizaê</h2>
       </Logo>
 
-      <Form onSubmit={() => {}}>
+      <Form onSubmit={() => signIn(email, password)}>
         <FormTitle>Entrar</FormTitle>
 
         <Input
