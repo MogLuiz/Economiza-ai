@@ -2,15 +2,16 @@
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
 
-// Components
+// Pages
 import App from "./app.routes";
+import Auth from "./auth.routes";
 
 const Routes: React.FC = () => (
   // -------------------------------------------------
   // Render
   // -------------------------------------------------
   <BrowserRouter>
-    <App />
+    <Auth />
   </BrowserRouter>
 );
 
