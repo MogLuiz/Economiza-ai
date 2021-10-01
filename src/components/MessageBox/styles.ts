@@ -28,4 +28,19 @@ export const Container = styled.div`
         font-weight: 500;
     }
 
+    @media(max-width: 770px) {
+        > header h1 {
+            font-size: 24px;
+
+            img {
+                height: 20px;
+                width: 20px;
+            }
+        }
+
+        > header p, > footer span {
+            font-size: 14px;
+        }
+    }
+
 `
