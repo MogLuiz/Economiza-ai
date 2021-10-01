@@ -59,5 +59,20 @@ export const Container = styled.div<IContainerProps>`
         }
     }    
 
+    @media(max-width: 420px) {
+        width: 100%;
+
+        > h1 {
+            display: flex;
+
+            strong {
+                position: initial;
+                width: auto;
+                font-size: 22px;
+                margin-right: 5px;
+            }
+        }
+
+    } 
 
 `
