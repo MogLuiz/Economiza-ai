@@ -1,7 +1,11 @@
+// Packages
 import styled from 'styled-components'
 
+// Types
+import { IContainerProps } from './types'
 
-export const Container = styled.div`
+
+export const Container = styled.div<IContainerProps>`
     grid-area: AS;
 
     background-color: ${props => props.theme.colors.secondary};
