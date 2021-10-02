@@ -4,14 +4,11 @@ import React, { useMemo, useState } from "react";
 // Utils
 import emojis from "../../utils/emojis";
 
-// Components
-import Toggle from "../Toggle";
-
 // Hooks
 import { useTheme } from "../../hooks/ThemeContext";
 
 // Style
-import { Container, Profile, Welcome, UserName } from "./styles";
+import { Container, Profile, Welcome, UserName, Toggle } from "./styles";
 
 const MainHeader: React.FC = () => {
   // -------------------------------------------------

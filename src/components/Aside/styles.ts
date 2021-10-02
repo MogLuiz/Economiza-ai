@@ -1,5 +1,5 @@
 // Packages
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 // Types
 import { IContainerProps } from './types'
@@ -13,12 +13,24 @@ export const Container = styled.div<IContainerProps>`
 
     border-right: 1px solid ${props => props.theme.colors.gray};
 
-    position: relative;
+    position: relative;  
+       
 
     @media(max-width: 600px) {
         padding-left: 7px;
         position: fixed;
         z-index: 2;
+
+        width: 170px; 
+
+        height: ${props => props.menuIsOpen ? "100vh" : "70px"};
+        overflow: hidden;
+
+        ${props => !props.menuIsOpen && css `
+            border: none;
+            border-bottom: 1px solid ${props => props.theme.colors.gray};
+        `}
+
     }
 
 `
@@ -28,17 +40,27 @@ export const Header = styled.header `
     align-items: center;
     
     height: 70px;
+
 `
 
 export const LogImg = styled.img `
     height: 38px;
     width: 38px;
+
+    @media(max-width: 600px) {
+        height: 25px;
+        width: 25px;
+    }
+    
 `
 
 export const Title = styled.h3 `
     color: ${props => props.theme.colors.white};
     margin-left: 10px;
 
+    @media(max-width: 600px) {
+        display: none;
+    }
     
 `
 
