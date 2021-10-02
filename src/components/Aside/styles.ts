@@ -9,6 +9,14 @@ export const Container = styled.div`
 
     border-right: 1px solid ${props => props.theme.colors.gray};
 
+    position: relative;
+
+    @media(max-width: 600px) {
+        padding-left: 7px;
+        position: fixed;
+        z-index: 2;
+    }
+
 `
 
 export const Header = styled.header `
