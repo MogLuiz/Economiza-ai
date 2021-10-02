@@ -18,7 +18,10 @@ export const Container = styled.div `
 
     display: flex;
 
-    
+    @media(max-width: 770px) {
+        display: flex;
+        width: 100%;
+    }
 
 `
 export const SideLeft = styled.aside`
@@ -27,6 +30,20 @@ export const SideLeft = styled.aside`
 
     > h2 {
         margin-bottom: 30px;
+    }
+
+    @media(max-width: 1345px) {
+        padding: 0 15px 5px;
+        margin-bottom: 7px;
+
+        > h2 {
+            margin-top: 20px;
+        }
+    }
+
+    @media(max-width) {
+        padding: 15px;
+        margin-bottom: 7px;
     }
 
 `
