@@ -58,5 +58,6 @@ export default [
   {"description":"Plano de Saúde",        "amount":"300.00","type":"saída","frequency":"recorrente","date":"2020-07-23"},
   {"description":"Compras do mês",        "amount":"700.00","type":"saída","frequency":"recorrente","date":"2020-07-25"},
   {"description":"Macbook",             "amount":"3050.00","type":"saída","frequency":"eventual",  "date":"2021-10-26"},
+  {"description":"Macbook",             "amount":"2050.00","type":"saída","frequency":"recorrente",  "date":"2021-10-26"},
   {"description":"Pizza",                 "amount":"60.00", "type":"saída","frequency":"eventual",  "date":"2020-07-19"}
 ]
