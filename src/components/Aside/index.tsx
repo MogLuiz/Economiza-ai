@@ -29,21 +29,34 @@ import {
 
 const Aside: React.FC = () => {
   // -------------------------------------------------
-  // Hooks
+  // States
   // -------------------------------------------------
+
   const [toggleMenuIsOpened, setToggleMenuIsOpened] = useState(false);
 
   // -------------------------------------------------
   // Hooks
   // -------------------------------------------------
+
   const { signOut } = useAuth();
+
+  // -------------------------------------------------
+  // Functions
+  // -------------------------------------------------
+
+  const handleToggleMenu = () => {
+    setToggleMenuIsOpened(!toggleMenuIsOpened);
+  };
+
   // -------------------------------------------------
   // Render
   // -------------------------------------------------
   return (
     <Container menuIsOpen={toggleMenuIsOpened}>
       <Header>
-        <ToggleMenu>{toggleMenuIsOpened ? <MdClose /> : <MdMenu />}</ToggleMenu>
+        <ToggleMenu onClick={handleToggleMenu}>
+          {toggleMenuIsOpened ? <MdClose /> : <MdMenu />}
+        </ToggleMenu>
 
         <LogImg src={logoImg} alt="Logo Economizaê" />
         <Title>Economizaê</Title>
