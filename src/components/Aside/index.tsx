@@ -16,6 +16,9 @@ import {
 import { useAuth } from "../../hooks/Auth";
 import { useTheme } from "../../hooks/ThemeContext";
 
+// Components
+import Toggle from "../Toggle";
+
 // Style
 import {
   Container,
@@ -53,6 +56,11 @@ const Aside: React.FC = () => {
     setToggleMenuIsOpened(!toggleMenuIsOpened);
   };
 
+  const handleChangeTheme = () => {
+    setDarkTheme(!darkTheme);
+    toggleTheme();
+  };
+
   // -------------------------------------------------
   // Render
   // -------------------------------------------------
@@ -88,6 +96,15 @@ const Aside: React.FC = () => {
           Sair
         </MenuItemButton>
       </MenuContainer>
+
+      <ThemeToggleFooter>
+        <Toggle
+          labelLeft="Light"
+          labelRight="Dark"
+          checked={darkTheme}
+          onChange={handleChangeTheme}
+        />
+      </ThemeToggleFooter>
     </Container>
   );
 };
