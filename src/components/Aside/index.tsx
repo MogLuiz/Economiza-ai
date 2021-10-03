@@ -34,6 +34,9 @@ const Aside: React.FC = () => {
   // -------------------------------------------------
 
   const [toggleMenuIsOpened, setToggleMenuIsOpened] = useState(false);
+  const [darkTheme, setDarkTheme] = useState(() =>
+    theme.title === "dark" ? true : false
+  );
 
   // -------------------------------------------------
   // Hooks
