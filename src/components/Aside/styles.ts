@@ -119,3 +119,27 @@ export const MenuItemButton = styled.button `
 `
 
 
+export const ToggleMenu = styled.button `
+
+    width: 35px;
+    height: 35px;
+
+    border-radius: 5px;
+    font-size: 22px;
+    background-color: ${props => props.theme.colors.warning};
+
+    transition: opacity .3s;
+
+    &:hover {
+        opacity: .7;
+    }
+
+    @media (max-width: 600px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+`
+
+
