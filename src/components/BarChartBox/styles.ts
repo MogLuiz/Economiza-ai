@@ -1,8 +1,20 @@
 // Packages
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 // Types
 import { ILegendProps } from './types'
+
+const animate = keyframes`
+
+    0% {
+        transform: translateX(100px)
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+
+`
 
 export const Container = styled.div`
 
@@ -17,6 +29,8 @@ export const Container = styled.div`
     border-radius: 7px;
 
     display: flex;
+
+    animation: ${animate} .5s;
 
     @media(max-width: 1200px) {
         display: flex;
