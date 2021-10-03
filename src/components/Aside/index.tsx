@@ -29,6 +29,7 @@ import {
   MenuItemLink,
   MenuItemButton,
   ToggleMenu,
+  ThemeToggleFooter,
 } from "./styles";
 
 const Aside: React.FC = () => {

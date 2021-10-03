@@ -7,8 +7,11 @@ import emojis from "../../utils/emojis";
 // Hooks
 import { useTheme } from "../../hooks/ThemeContext";
 
+// Components
+import Toggle from "../Toggle";
+
 // Style
-import { Container, Profile, Welcome, UserName, Toggle } from "./styles";
+import { Container, Profile, Welcome, UserName } from "./styles";
 
 const MainHeader: React.FC = () => {
   // -------------------------------------------------

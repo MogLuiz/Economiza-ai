@@ -145,7 +145,8 @@ export const ToggleMenu = styled.button `
 
     }
     
-
 `
+
+export const ThemeToggleFooter = styled.div``
 
 
