@@ -8,6 +8,8 @@ import {
   MdArrowDownward,
   MdArrowUpward,
   MdExitToApp,
+  MdClose,
+  MdMenu,
 } from "react-icons/md";
 
 // Hooks
