@@ -30,6 +30,13 @@ import {
 
 const Aside: React.FC = () => {
   // -------------------------------------------------
+  // Hooks
+  // -------------------------------------------------
+
+  const { signOut } = useAuth();
+  const { toggleTheme, theme } = useTheme();
+
+  // -------------------------------------------------
   // States
   // -------------------------------------------------
 
@@ -37,13 +44,6 @@ const Aside: React.FC = () => {
   const [darkTheme, setDarkTheme] = useState(() =>
     theme.title === "dark" ? true : false
   );
-
-  // -------------------------------------------------
-  // Hooks
-  // -------------------------------------------------
-
-  const { signOut } = useAuth();
-  const { toggleTheme, theme } = useTheme();
 
   // -------------------------------------------------
   // Functions
