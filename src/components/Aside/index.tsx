@@ -14,6 +14,7 @@ import {
 
 // Hooks
 import { useAuth } from "../../hooks/Auth";
+import { useTheme } from "../../hooks/ThemeContext";
 
 // Style
 import {
@@ -39,6 +40,7 @@ const Aside: React.FC = () => {
   // -------------------------------------------------
 
   const { signOut } = useAuth();
+  const { toggleTheme, theme } = useTheme();
 
   // -------------------------------------------------
   // Functions
