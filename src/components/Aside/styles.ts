@@ -2,7 +2,7 @@
 import styled, { css } from 'styled-components'
 
 // Types
-import { IContainerProps } from './types'
+import { IContainerProps, IThemeToggleFooterProps } from './types'
 
 
 export const Container = styled.div<IContainerProps>`
@@ -147,6 +147,6 @@ export const ToggleMenu = styled.button `
     
 `
 
-export const ThemeToggleFooter = styled.div``
+export const ThemeToggleFooter = styled.footer<IThemeToggleFooterProps>``
 
 
