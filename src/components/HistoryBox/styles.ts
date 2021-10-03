@@ -1,8 +1,20 @@
 // packages
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 // types
 import { ILegendProps } from './types'
+
+const animate = keyframes`
+
+    0% {
+        transform: translateX(-100px)
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+
+`
 
 export const Container = styled.div`
 
@@ -18,6 +30,8 @@ export const Container = styled.div`
     padding: 30px 20px;
 
     border-radius: 7px;
+
+    animation: ${animate} .5s;
 
 `
 
