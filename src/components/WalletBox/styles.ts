@@ -1,8 +1,20 @@
 // Packages
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 
 // Types
 import { IContainerProps } from './types'
+
+const animate = keyframes`
+
+    0% {
+        transform: translateX(-100px)
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+
+`
 
 export const Container = styled.div<IContainerProps>`
 
@@ -19,6 +31,8 @@ export const Container = styled.div<IContainerProps>`
 
     position: relative;
     overflow: hidden;
+
+    animation: ${animate} .5s;
 
     > img {
         height: 110%;
