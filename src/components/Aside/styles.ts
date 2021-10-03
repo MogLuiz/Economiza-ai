@@ -147,6 +147,16 @@ export const ToggleMenu = styled.button `
     
 `
 
-export const ThemeToggleFooter = styled.footer<IThemeToggleFooterProps>``
+export const ThemeToggleFooter = styled.footer<IThemeToggleFooterProps>`
+
+    display: none;
+    position: absolute;
+    bottom: 30px;
+
+    @media(max-width: 600px) {
+        display: ${props => props.menuIsOpen ? "flex" : "none"};
+    }
+
+`
 
 

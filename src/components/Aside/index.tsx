@@ -98,7 +98,7 @@ const Aside: React.FC = () => {
         </MenuItemButton>
       </MenuContainer>
 
-      <ThemeToggleFooter>
+      <ThemeToggleFooter menuIsOpen={toggleMenuIsOpened}>
         <Toggle
           labelLeft="Light"
           labelRight="Dark"
