@@ -1,5 +1,5 @@
 // Packages
-import React from "react";
+import React, { useState } from "react";
 
 // Assets
 import logoImg from "../../assets/logo.svg";
@@ -24,9 +24,15 @@ import {
   MenuContainer,
   MenuItemLink,
   MenuItemButton,
+  ToggleMenu,
 } from "./styles";
 
 const Aside: React.FC = () => {
+  // -------------------------------------------------
+  // Hooks
+  // -------------------------------------------------
+  const [toggleMenuIsOpened, setToggleMenuIsOpened] = useState(false);
+
   // -------------------------------------------------
   // Hooks
   // -------------------------------------------------
@@ -35,8 +41,10 @@ const Aside: React.FC = () => {
   // Render
   // -------------------------------------------------
   return (
-    <Container menuIsOpen={true}>
+    <Container menuIsOpen={toggleMenuIsOpened}>
       <Header>
+        <ToggleMenu>{toggleMenuIsOpened ? <MdClose /> : <MdMenu />}</ToggleMenu>
+
         <LogImg src={logoImg} alt="Logo Economizaê" />
         <Title>Economizaê</Title>
       </Header>
