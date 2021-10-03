@@ -1,8 +1,10 @@
+// Packages
 import styled from "styled-components";
 
-interface ITagProps {
-    color: string;
-}
+// Types
+import { ITagProps } from './types'
+
+
 
 export const Container = styled.li `
     background-color: ${props => props.theme.colors.tertiary};
