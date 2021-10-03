@@ -17,7 +17,7 @@ export const Container = styled.div<IContainerProps>`
        
 
     @media(max-width: 600px) {
-        padding-left: 7px;
+        padding-left: 20px;
         position: fixed;
         z-index: 2;
 
