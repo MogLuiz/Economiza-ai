@@ -73,7 +73,7 @@ $ yarn start
 
 ### Dark Mode gif
 
- <img align="center" alt="App Screenshot" src="https://user-images.githubusercontent.com/58401291/135830224-0cdbbf92-8d96-4d48-8053-cab3801b8698.gif" width="100%" height="100%"/>
+ <img align="center" alt="App git" src="https://user-images.githubusercontent.com/58401291/135833067-9e7a516f-c724-403d-bee0-51bde3825084.gif" width="100%" height="100%"/>
 
 
 ### Details
