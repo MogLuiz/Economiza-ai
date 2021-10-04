@@ -1,46 +1,102 @@
-# Getting Started with Create React App
+<h1 align="center">
+    <img alt="GoStack Bootcamp" src="https://res.cloudinary.com/marcelojrfarias/image/upload/v1587323057/gostack_gy3h7u.png" />
+    <br>
+    <img alt="GitHub Explorer" src="https://res.cloudinary.com/marcelojrfarias/image/upload/v1604355251/logo_hegw8y.svg" />
+    <br>
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h4 align="center">
+  An WEB Application to explore GitHub repositories.
+</h4>
+<p align="center">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/marcelojrfarias/githubexplorer.svg">
 
-## Available Scripts
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/marcelojrfarias/githubexplorer.svg">
 
-In the project directory, you can run:
+  <a href="https://www.codacy.com/gh/marcelojrfarias/githubexplorer/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=marcelojrfarias/githubexplorer&amp;utm_campaign=Badge_Grade">
+    <img src="https://app.codacy.com/project/badge/Grade/28d69aadfc8f41778b027da1470d1318"/>
+  </a>
 
-### `npm start`
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/marcelojrfarias/githubexplorer.svg">
+  <a href="https://github.com/marcelojrfarias/githubexplorer/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/marcelojrfarias/githubexplorer.svg">
+  </a>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  <a href="https://github.com/marcelojrfarias/githubexplorer/issues">
+    <img alt="Repository issues" src="https://img.shields.io/github/issues/marcelojrfarias/githubexplorer.svg">
+  </a>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+  <img alt="GitHub" src="https://img.shields.io/github/license/marcelojrfarias/githubexplorer.svg">
+</p>
 
-### `npm test`
+<p align="center">
+  <a href="#rocket-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#gear-how-to-use">How To Use</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#computer-application">Application</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#memo-license">License</a>
+</p>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## :rocket: Technologies
 
-### `npm run build`
+This project was developed at the [RocketSeat GoStack Bootcamp][gostack] with the following technologies:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [ReactJS][reactjs]
+- [Styled Components][styled-components]
+- [Typescript][typescript]
+- [NodeJS][nodejs]
+- [Axios][axios]
+- [Eslint][eslint]
+- [Prettier][prettier]
+- [EditorConfig][editor-config]
+- [Visual Studio Code][vscode]
+- And some other packages...
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## :gear: How To Use
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To clone and run this application, you'll need [Git][git], [Node.js v14.15.0][nodejs] or higher + [Yarn v1.22][yarn] or higher installed on your computer. From your command line:
 
-### `npm run eject`
+```bash
+# Clone this repository
+$ git clone https://github.com/marcelojrfarias/githubexplorer
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# Go into the repository
+$ cd githubexplorer
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Install dependencies
+$ yarn install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# Run the app
+$ yarn start
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## :computer: Application
 
-## Learn More
+### Repositories
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  <img align="center" alt="App Screenshot" src="https://res.cloudinary.com/marcelojrfarias/image/upload/v1604356258/githubexplorer-repositories_gxtesu.png"/>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Details
+
+  <img align="center" alt="App Screenshot" src="https://res.cloudinary.com/marcelojrfarias/image/upload/v1604356258/githubexplorer-details_hnljga.png"/>
+
+## :memo: License
+
+This project is under the MIT license. See the [LICENSE](https://github.com/marcelojrfarias/githubexplorer/blob/master/LICENSE) for more information.
+
+---
+
+Made with 💗 by Luiz Henrique 👋 [Get in touch!](https://www.linkedin.com/in/luiz-henrique-9a41091b0/)
+
+[nodejs]: https://nodejs.org/
+[typescript]: https://www.typescriptlang.org/
+[gostack]: https://rocketseat.com.br/bootcamp
+[express]: https://expressjs.com/
+[git]: https://git-scm.com
+[yarn]: https://yarnpkg.com/
+[vscode]: https://code.visualstudio.com/
+[axios]: https://github.com/axios/axios
+[reactjs]: https://reactjs.org/
+[eslint]: https://eslint.org/
+[prettier]: https://prettier.io/
+[editor-config]: https://editorconfig.org/
+[styled-components]: https://styled-components.com/
