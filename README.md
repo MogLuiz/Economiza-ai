@@ -1,33 +1,12 @@
 <h1 align="center">
-    <img alt="GoStack Bootcamp" src="https://res.cloudinary.com/marcelojrfarias/image/upload/v1587323057/gostack_gy3h7u.png" />
+    <img alt="GoStack Bootcamp" src="https://user-images.githubusercontent.com/58401291/135838436-c9db43a5-fcb2-4942-bd53-726dfd687c04.png" />
     <br>
-    <img alt="GitHub Explorer" src="https://res.cloudinary.com/marcelojrfarias/image/upload/v1604355251/logo_hegw8y.svg" />
-    <br>
+    
 </h1>
 
 <h4 align="center">
-  An WEB Application to explore GitHub repositories.
+ A financial control dashboard
 </h4>
-<p align="center">
-  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/marcelojrfarias/githubexplorer.svg">
-
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/marcelojrfarias/githubexplorer.svg">
-
-  <a href="https://www.codacy.com/gh/marcelojrfarias/githubexplorer/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=marcelojrfarias/githubexplorer&amp;utm_campaign=Badge_Grade">
-    <img src="https://app.codacy.com/project/badge/Grade/28d69aadfc8f41778b027da1470d1318"/>
-  </a>
-
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/marcelojrfarias/githubexplorer.svg">
-  <a href="https://github.com/marcelojrfarias/githubexplorer/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/marcelojrfarias/githubexplorer.svg">
-  </a>
-
-  <a href="https://github.com/marcelojrfarias/githubexplorer/issues">
-    <img alt="Repository issues" src="https://img.shields.io/github/issues/marcelojrfarias/githubexplorer.svg">
-  </a>
-
-  <img alt="GitHub" src="https://img.shields.io/github/license/marcelojrfarias/githubexplorer.svg">
-</p>
 
 <p align="center">
   <a href="#rocket-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -38,13 +17,15 @@
 
 ## :rocket: Technologies
 
-This project was developed at the [RocketSeat GoStack Bootcamp][gostack] with the following technologies:
 
 - [ReactJS][reactjs]
 - [Styled Components][styled-components]
 - [Typescript][typescript]
-- [NodeJS][nodejs]
-- [Axios][axios]
+- [React Router](https://reactrouter.com/web/guides/quick-start)
+- [Recharts](https://recharts.org/en-US/)
+- [Context API](https://pt-br.reactjs.org/docs/context.html)
+- [styled media query](https://github.com/morajabi/styled-media-query)
+- [keyframes](https://developer.mozilla.org/pt-BR/docs/Web/CSS/@keyframes)
 - [Eslint][eslint]
 - [Prettier][prettier]
 - [EditorConfig][editor-config]
