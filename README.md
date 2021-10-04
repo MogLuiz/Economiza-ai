@@ -71,13 +71,14 @@ $ yarn start
 
 ## :computer: Application
 
-### Repositories
+### Dark Mode gif
 
-  <img align="center" alt="App Screenshot" src="https://res.cloudinary.com/marcelojrfarias/image/upload/v1604356258/githubexplorer-repositories_gxtesu.png"/>
+ <img align="center" alt="App Screenshot" src="https://user-images.githubusercontent.com/58401291/135830224-0cdbbf92-8d96-4d48-8053-cab3801b8698.gif" width="100%" height="100%"/>
+
 
 ### Details
 
-  <img align="center" alt="App Screenshot" src="https://res.cloudinary.com/marcelojrfarias/image/upload/v1604356258/githubexplorer-details_hnljga.png"/>
+  <img align="center" alt="App Screenshot" src="https://res.cloudinary.com/marcelojrfarias/image/upload/v1604356258/githubexplorer-details_hnljga.png" />
 
 ## :memo: License
 
