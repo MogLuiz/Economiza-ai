@@ -57,10 +57,10 @@ To clone and run this application, you'll need [Git][git], [Node.js v14.15.0][no
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/marcelojrfarias/githubexplorer
+$ git clone https://github.com/MogLuiz/Economiza-ai.git
 
 # Go into the repository
-$ cd githubexplorer
+$ cd economizai
 
 # Install dependencies
 $ yarn install
@@ -71,15 +71,34 @@ $ yarn start
 
 ## :computer: Application
 
-### Dark Mode gif
+<h1 align="left">
+Dark Mode Gif
+</h1>
+ <img align="center" alt="Dark Mode Gif" src="https://user-images.githubusercontent.com/58401291/135833067-9e7a516f-c724-403d-bee0-51bde3825084.gif" width="100%" height="100%"/>
 
- <img align="center" alt="App git" src="https://user-images.githubusercontent.com/58401291/135833067-9e7a516f-c724-403d-bee0-51bde3825084.gif" width="100%" height="100%"/>
 
+<h1 align="left">
+Light Mode Gif
+</h1>
 
-### Details
+<img align="center" alt="Dark Mode Gif" src="https://user-images.githubusercontent.com/58401291/135834382-4ca9cb5d-d8f8-4cb6-bc66-68fa33c7dcc6.gif" width="100%" height="100%"/>
+  
+<h1 align="center">
+Responsive Ipad
+</h1>
 
-  <img align="center" alt="App Screenshot" src="https://res.cloudinary.com/marcelojrfarias/image/upload/v1604356258/githubexplorer-details_hnljga.png" />
+<p align="center">
+<img align="center" alt="Responsive Ipad" src="https://user-images.githubusercontent.com/58401291/135836231-d45a7913-9e69-4b5e-a366-6d9a6ba02756.gif" />
+</p>
 
+<h1 align="center">
+Responsive Smartphone
+</h1>
+
+<p align="center">
+<img align="center" alt="Responsive Smartphone" src="https://user-images.githubusercontent.com/58401291/135837733-1c1c9f85-09eb-4a2e-9069-1a9579916488.gif" />
+</p>
+    
 ## :memo: License
 
 This project is under the MIT license. See the [LICENSE](https://github.com/marcelojrfarias/githubexplorer/blob/master/LICENSE) for more information.
